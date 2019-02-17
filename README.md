@@ -2,6 +2,8 @@
 
 Система учета ставок для хакатонов .Net сообщества
 
+# Production: http://bookmakerboard.azurewebsites.net/
+
 
 # Project Promo:
 
