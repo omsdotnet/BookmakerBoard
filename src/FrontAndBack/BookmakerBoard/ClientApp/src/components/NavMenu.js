@@ -20,17 +20,27 @@ export class NavMenu extends Component {
           <Nav>
             <LinkContainer to={'/'} exact>
               <NavItem>
-                <Glyphicon glyph='home' /> Home
+                <Glyphicon glyph='list' /> Результаты
               </NavItem>
             </LinkContainer>
-            <LinkContainer to={'/counter'}>
+            <LinkContainer to={'/rides'}>
               <NavItem>
-                <Glyphicon glyph='education' /> Counter
+                <Glyphicon glyph='knight' /> Заезды
               </NavItem>
             </LinkContainer>
-            <LinkContainer to={'/fetchdata'}>
+            <LinkContainer to={'/teams'}>
               <NavItem>
-                <Glyphicon glyph='th-list' /> Fetch data
+                <Glyphicon glyph='asterisk' /> Команды
+              </NavItem>
+            </LinkContainer>
+            <LinkContainer to={'/bidders'}>
+              <NavItem>
+                <Glyphicon glyph='user' /> Участники
+              </NavItem>
+            </LinkContainer>
+            <LinkContainer to={'/login'}>
+              <NavItem>
+                <Glyphicon glyph='lock' /> Войти
               </NavItem>
             </LinkContainer>
           </Nav>

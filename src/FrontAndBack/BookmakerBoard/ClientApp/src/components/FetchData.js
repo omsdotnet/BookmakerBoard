@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+﻿import React, { Component } from 'react';
 
 export class FetchData extends Component {
   displayName = FetchData.name
@@ -41,13 +41,13 @@ export class FetchData extends Component {
 
   render() {
     let contents = this.state.loading
-      ? <p><em>Loading...</em></p>
+      ? <p><em>Хоп, пошла загрузочка, обожди чуток...</em></p>
       : FetchData.renderForecastsTable(this.state.forecasts);
 
     return (
       <div>
-        <h1>Weather forecast</h1>
-        <p>This component demonstrates fetching data from the server.</p>
+        <h1>Пример таблицы</h1>
+        <p>Данные получаем с сервиса</p>
         {contents}
       </div>
     );

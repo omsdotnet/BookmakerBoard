@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+﻿import React, { Component } from 'react';
 
 export class Counter extends Component {
   displayName = Counter.name
@@ -18,9 +18,9 @@ export class Counter extends Component {
   render() {
     return (
       <div>
-        <h1>Counter</h1>
+        <h1>Пример счетчика</h1>
 
-        <p>This is a simple example of a React component.</p>
+        <p>Жмешь кнопарь, счетчик считает</p>
 
         <p>Current count: <strong>{this.state.currentCount}</strong></p>
 

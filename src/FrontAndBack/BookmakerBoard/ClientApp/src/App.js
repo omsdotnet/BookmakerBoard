@@ -11,9 +11,11 @@ export default class App extends Component {
   render() {
     return (
       <Layout>
-        <Route exact path='/' component={Home} />
-        <Route path='/counter' component={Counter} />
-        <Route path='/fetchdata' component={FetchData} />
+        <Route exact path='/' component={FetchData} />
+        <Route path='/rides' component={FetchData} />
+        <Route path='/teams' component={FetchData} />
+        <Route path='/bidders' component={FetchData} />
+        <Route path='/login' component={Counter} />
       </Layout>
     );
   }
