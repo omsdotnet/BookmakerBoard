@@ -39,7 +39,7 @@ export class Bidders extends Component {
 
   render() {
     let contents = this.state.loading
-      ? <p><em>Хоп, пошла загрузочка, обожди чуток...</em></p>
+      ? <p><em>Загрузка...</em></p>
       : Bidders.renderTable(this.state.bidders);
 
     return (

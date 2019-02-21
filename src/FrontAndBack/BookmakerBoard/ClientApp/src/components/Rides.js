@@ -1,7 +1,7 @@
 ﻿import React, { Component } from 'react';
 
-export class Home extends Component {
-  displayName = Home.name
+export class Rides extends Component {
+  displayName = Rides.name
 
   constructor(props) {
     super(props);
@@ -40,12 +40,12 @@ export class Home extends Component {
   render() {
     let contents = this.state.loading
       ? <p><em>Загрузка...</em></p>
-      : Home.renderTable(this.state.rides);
+      : Rides.renderTable(this.state.rides);
 
     return (
       <div>
-        <h1>Результаты заездов</h1>
-        <p>Лидеры:</p>
+        <h1>Заезды</h1>
+        <p>Здесь регистрируем заезды и ставки</p>
         {contents}
       </div>
     );
