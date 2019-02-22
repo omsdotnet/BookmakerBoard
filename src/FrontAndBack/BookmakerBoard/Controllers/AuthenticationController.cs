@@ -1,8 +1,9 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BookmakerBoard.Entities;
+using BookmakerBoard.Logics;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookmakerBoard.Controllers
@@ -12,10 +13,16 @@ namespace BookmakerBoard.Controllers
   {
 
     [HttpGet("[action]")]
-    public bool ChekLogin(string name, string password)
+    public AuthenticationResult Login(string name, string password)
     {
+      string adminHash = @"soѯѿѿѿѫѵrookeѻѿѿѿѿco";
+        
+      return new AuthenticationResult()
+      {
+        Authentificated = Scrambler.GetHash(name, password) == adminHash,
 
-      return (name == "admin") && (password == "admin");
+        Key = Guid.NewGuid().ToString()
+      };
     }
 
   }
