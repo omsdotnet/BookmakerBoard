@@ -14,5 +14,20 @@ namespace BookmakerBoard.Entities
     public List<uint> WinnerTeams { get; set; }
 
     public List<Rate> Rates { get; set; }
+
+    public void Calculate()
+    {
+      foreach (var item in Rates)
+      {
+        if (WinnerTeams.Contains(item.Team))
+        {
+          item.Bidder.CurrentScore += item.RateValue * 2;
+        }
+        else
+        {
+          item.Bidder.CurrentScore -= item.RateValue;
+        }
+      }
+    }
   }
 }

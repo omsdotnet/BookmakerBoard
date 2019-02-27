@@ -21,12 +21,16 @@ namespace BookmakerBoard.Controllers
         Number = (uint)index + 1,
         Rates = new List<Rate>
         {
-          new Rate { Id = 0, Bigger = 0, Team = 0, RateValue = 100 },
-          new Rate { Id = 1, Bigger = 1, Team = 1, RateValue = 200 },
-          new Rate { Id = 2, Bigger = 2, Team = 2, RateValue = 300 },
-          new Rate { Id = 3, Bigger = 3, Team = 3, RateValue = 400 },
+          new Rate { Id = 0, Bidder = new Bidder() { Id = 0 }, Team = 0, RateValue = 100 },
+          new Rate { Id = 1, Bidder = new Bidder() { Id = 1 }, Team = 1, RateValue = 100 },
+          new Rate { Id = 2, Bidder = new Bidder() { Id = 2 }, Team = 2, RateValue = 100 },
+          new Rate { Id = 3, Bidder = new Bidder() { Id = 3 }, Team = 3, RateValue = 100 },
         },
-        WinnerTeams = new List<uint> { (uint)rng.Next(5), (uint)rng.Next(5) }
+        WinnerTeams = new List<uint>
+        {
+          (uint)rng.Next(5),
+          (uint)rng.Next(5)
+        }
       }).OrderByDescending(x => x.Number);
     }
 

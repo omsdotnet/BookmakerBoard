@@ -9,7 +9,7 @@ namespace BookmakerBoard.Entities
   {
     public uint Id { get; set; }
 
-    public uint Bigger { get; set; }
+    public Bidder Bidder { get; set; }
 
     public uint Team { get; set; }
 
