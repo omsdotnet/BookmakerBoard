@@ -16,7 +16,12 @@ namespace BookmakerBoard.Entities
 
     public void CalculateBiddersCurrentScore()
     {
-      foreach(var item in Rides.OrderBy(x => x.Number))
+      foreach(var item in Bidders)
+      {
+        item.CurrentScore = item.StartScore;
+      }
+
+      foreach (var item in Rides.OrderBy(x => x.Number))
       {
         item.Calculate();
       }
