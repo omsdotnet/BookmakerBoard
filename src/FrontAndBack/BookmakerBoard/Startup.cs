@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
+using BookmakerBoard.Logics;
+using BookmakerBoard.Logics.Impl;
 
 namespace BookmakerBoard
 {
@@ -20,6 +22,13 @@ namespace BookmakerBoard
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
+      services.AddSingleton<IGame>(new Game());
+      services.AddSingleton<IGameStorage, GameStorage>();
+      services.AddSingleton<IScrambler, Scrambler>();
+
+      var sp = services.BuildServiceProvider();
+      sp.GetService<IGameStorage>().Load();
+
       services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
       // In production, the React files will be served from this directory

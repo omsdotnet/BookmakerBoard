@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using BookmakerBoard.Models;
 
-namespace BookmakerBoard.Entities
+namespace BookmakerBoard.Logics.Impl
 {
-  public class Game
+  public class Game : IGame
   {
     public List<Bidder> Bidders { get; set; }
 

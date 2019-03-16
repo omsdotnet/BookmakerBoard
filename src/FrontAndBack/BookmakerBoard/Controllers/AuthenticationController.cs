@@ -1,16 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using BookmakerBoard.Entities;
-using BookmakerBoard.Logics;
 using Microsoft.AspNetCore.Mvc;
+using BookmakerBoard.Logics;
+using BookmakerBoard.Models;
 
 namespace BookmakerBoard.Controllers
 {
   [Route("api/[controller]")]
   public class AuthenticationController : Controller
   {
+    private readonly IScrambler scramblerData;
+
+    public AuthenticationController(IScrambler scrambler)
+    {
+      scramblerData = scrambler;
+    }
 
     [HttpGet("[action]")]
     public AuthenticationResult Login(string name, string password)
@@ -19,7 +22,7 @@ namespace BookmakerBoard.Controllers
         
       return new AuthenticationResult()
       {
-        Authentificated = Scrambler.GetHash(name, password) == adminHash,
+        Authentificated = scramblerData.GetHash(name, password) == adminHash,
 
         Key = Guid.NewGuid().ToString()
       };

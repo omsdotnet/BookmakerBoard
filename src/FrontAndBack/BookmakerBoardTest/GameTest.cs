@@ -1,6 +1,6 @@
-using BookmakerBoard.Entities;
 using NUnit.Framework;
 using System.Collections.Generic;
+using BookmakerBoard.Logics;
 
 namespace Tests
 {

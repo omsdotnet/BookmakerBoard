@@ -2,7 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BookmakerBoard.Entities;
+using BookmakerBoard.Models;
+using BookmakerBoard.Logics;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookmakerBoard.Controllers
@@ -10,20 +11,18 @@ namespace BookmakerBoard.Controllers
   [Route("api/[controller]")]
   public class TeamsController : Controller
   {
-    private static string[] Names = new[]
+    private readonly IGame gameLogic;
+
+    public TeamsController(IGame game)
     {
-            "Злой рок", "Бригада", "Слишком умная команда", "Команда А"
-    };
+      gameLogic = game;
+    }
 
     [HttpGet("[action]")]
     public IEnumerable<Team> GetAll()
     {
-      var rng = new Random();
-      return Enumerable.Range(0, Names.Length).Select(index => new Team
-      {
-        Id = (uint)index,
-        Name = Names[index]
-      });
+      return gameLogic.Teams;
+      
     }
   }
 }

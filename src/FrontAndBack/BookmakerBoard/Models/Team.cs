@@ -3,16 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BookmakerBoard.Entities
+namespace BookmakerBoard.Models
 {
-  public class Bidder
+  public class Team
   {
     public uint Id { get; set; }
 
     public string Name { get; set; }
-
-    public uint StartScore { get; set; }
-
-    public ulong CurrentScore { get; set; }
   }
 }
