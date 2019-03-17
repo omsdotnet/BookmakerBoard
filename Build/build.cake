@@ -86,7 +86,6 @@ Setup(context =>
       Key = buildContext.SonarProjectKey,
       Name = buildContext.SonarProjectName,
       NUnitReportsPath = buildContext.PathsManager.Reports.Combine(Directory("./TestsResultsReport.xml")).FullPath,
-      Verbose = true,
       Version = buildContext.VersionManager.FullVersion,
       UseCoreClr = true,
       ArgumentCustomization = args => 
@@ -104,22 +103,6 @@ Setup(context =>
 ///////////////////////////////////////////////////////////////////////////////
 // TASKS
 ///////////////////////////////////////////////////////////////////////////////
-Task("UpdateVersion")
-    .Does(() => 
-{
-    var assemblyVersionRegex = new System.Text.RegularExpressions.Regex("\\[assembly: AssemblyVersion\\(\"[0-9\\.\\*]+\"\\)\\]");
-    var assemblyFileVersionRegex = new System.Text.RegularExpressions.Regex("\\[assembly: AssemblyFileVersion\\(\"[0-9\\.\\*]+\"\\)\\]");
-    var assemblyInformationalVersionRegex = new System.Text.RegularExpressions.Regex("\\[assembly: AssemblyInformationalVersion\\(\"[0-9\\.\\*]+\"\\)\\]");
-    var assemblyVersion = $"[assembly: AssemblyVersion(\"{buildContext.VersionManager.FullVersion}\")]";
-    var assemblyFileVersion = $"[assembly: AssemblyFileVersion(\"{buildContext.VersionManager.FullVersion}\")]";
-    var assemblyInformationalVersion = $"[assembly: AssemblyInformationalVersion(\"{buildContext.VersionManager.SemVersion}\")]";
-
-    ReplaceRegexInFiles($"{buildContext.PathsManager.Working}/**/AssemblyInfo.cs", assemblyVersionRegex.ToString(), assemblyVersion);
-    ReplaceRegexInFiles($"{buildContext.PathsManager.Working}/**/AssemblyInfo.cs", assemblyFileVersionRegex.ToString(), assemblyFileVersion);
-    ReplaceRegexInFiles($"{buildContext.PathsManager.Working}/**/AssemblyInfo.cs", assemblyInformationalVersionRegex.ToString(), assemblyInformationalVersion);
-    ReplaceTextInFiles($"{buildContext.PathsManager.Working}/**/*.hbm.xml", "Version=1.0.0.0", $"Version={buildContext.VersionManager.FullVersion}");      
-});
-
 Task("Build")
   .Does(() =>
 {
