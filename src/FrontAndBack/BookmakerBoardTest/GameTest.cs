@@ -1,9 +1,12 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 using BookmakerBoard.Logics;
+using BookmakerBoard.Logics.Impl;
+using BookmakerBoard.Models;
 
 namespace Tests
 {
+  [TestFixture(Category = "Unit")]
   public class GameTest
   {
     private Game gameEngine;
@@ -11,16 +14,18 @@ namespace Tests
     [OneTimeSetUp]
     public void Setup()
     {
-      gameEngine = new Game();
-      gameEngine.Teams = new List<Team>()
+      gameEngine = new Game
+      {
+        Teams = new List<Team>()
       {
         new Team() { Id = 0, Name = "Winner" },
         new Team() { Id = 1, Name = "Looser" }
-      };
-      gameEngine.Bidders = new List<Bidder>()
+      },
+        Bidders = new List<Bidder>()
       {
         new Bidder() { Id = 0, Name = "Luky", StartScore = 1000 },
         new Bidder() { Id = 1, Name = "Not Luky", StartScore = 1000 }
+      }
       };
       gameEngine.Rides = new List<Ride>()
       {

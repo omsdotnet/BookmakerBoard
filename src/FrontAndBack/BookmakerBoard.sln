@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookmakerBoard", "BookmakerBoard\BookmakerBoard.csproj", "{C1C738A1-A528-49F8-A3A0-DEE576E43D82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookmakerBoardTest", "BookmakerBoardTest\BookmakerBoardTest.csproj", "{662B2BE7-E7DF-4F81-8FFB-8C9F9C94BCF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookmakerBoard.Tests", "BookmakerBoardTest\BookmakerBoard.Tests.csproj", "{662B2BE7-E7DF-4F81-8FFB-8C9F9C94BCF8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
