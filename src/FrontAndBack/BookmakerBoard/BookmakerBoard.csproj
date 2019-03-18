@@ -7,6 +7,23 @@
     <IsPackable>false</IsPackable>
     <SpaRoot>ClientApp\</SpaRoot>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
+    <Authors>BookmakerBoard Team</Authors>
+    <PackageId>BookmakerBoard</PackageId>
+    <Description>Система учета ставок для хакатонов .Net сообщества</Description>
+    <Company>OmsDotNet Community</Company>
+    <RepositoryUrl>https://github.com/omsdotnet/BookmakerBoard.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\..\Bin\BookmakerBoard\</OutputPath>
+    <DocumentationFile>..\..\..\Bin\BookmakerBoard\BookmakerBoard.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\..\Bin\BookmakerBoard\</OutputPath>
+    <DocumentationFile>..\..\..\Bin\BookmakerBoard\BookmakerBoard.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
