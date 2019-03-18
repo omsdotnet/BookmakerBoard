@@ -40,11 +40,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Remove="DataFiles\gameData.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="DataFiles\gameData.json" />
+    <Content Update="DataFiles\gameData.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

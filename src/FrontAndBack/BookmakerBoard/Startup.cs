@@ -29,7 +29,7 @@ namespace BookmakerBoard
       var sp = services.BuildServiceProvider();
       var storage = sp.GetService<IGameStorage>();
       storage.Load();
-      //storage.Save();
+
 
 
       services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);

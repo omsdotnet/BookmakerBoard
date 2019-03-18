@@ -12,22 +12,26 @@ namespace BookmakerBoard.Logics.Impl
     public GameStorage(IGame game, IHostingEnvironment appEnvironment)
     {
       gameEngine = game;
+
       dataFilePath = appEnvironment.ContentRootPath + "/DataFiles/gameData.json";
     }
 
     public void Load()
     {
-      DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Game));
+      if (File.Exists(dataFilePath))
+      {
+        DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Game));
 
-      FileStream fileStream = new FileStream(dataFilePath, FileMode.Open);
-      
-      var gameTmp = ser.ReadObject(fileStream) as Game;
+        FileStream fileStream = new FileStream(dataFilePath, FileMode.Open);
 
-      gameEngine.Bidders = gameTmp.Bidders;
-      gameEngine.Teams = gameTmp.Teams;
-      gameEngine.Rides = gameTmp.Rides;
+        var gameTmp = ser.ReadObject(fileStream) as Game;
 
-      fileStream.Close();
+        gameEngine.Bidders = gameTmp.Bidders;
+        gameEngine.Teams = gameTmp.Teams;
+        gameEngine.Rides = gameTmp.Rides;
+
+        fileStream.Close();
+      }
     }
 
     public void Save()
