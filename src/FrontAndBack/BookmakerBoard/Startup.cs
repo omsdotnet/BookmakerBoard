@@ -27,7 +27,10 @@ namespace BookmakerBoard
       services.AddSingleton<IScrambler, Scrambler>();
 
       var sp = services.BuildServiceProvider();
-      sp.GetService<IGameStorage>().Load();
+      var storage = sp.GetService<IGameStorage>();
+      storage.Load();
+      //storage.Save();
+
 
       services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 

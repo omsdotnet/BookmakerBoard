@@ -1,75 +1,46 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using BookmakerBoard.Models;
+﻿using Microsoft.AspNetCore.Hosting;
+using System.IO;
+using System.Runtime.Serialization.Json;
 
 namespace BookmakerBoard.Logics.Impl
 {
   public class GameStorage : IGameStorage
   {
     private readonly IGame gameEngine;
+    private string dataFilePath;
 
-    public GameStorage(IGame game)
+    public GameStorage(IGame game, IHostingEnvironment appEnvironment)
     {
-      this.gameEngine = game;
+      gameEngine = game;
+      dataFilePath = appEnvironment.ContentRootPath + "/DataFiles/gameData.json";
     }
-
-
 
     public void Load()
     {
-      var rng = new Random();
+      DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Game));
 
-      string[] NamesTeams = new[]
-      {
-         "Злой рок", "Бригада", "Слишком умная команда", "Команда А"
-      };
+      FileStream fileStream = new FileStream(dataFilePath, FileMode.Open);
+      
+      var gameTmp = ser.ReadObject(fileStream) as Game;
 
-      gameEngine.Teams = Enumerable.Range(0, NamesTeams.Length).Select(index => new Team
-      {
-        Id = (uint)index,
-        Name = NamesTeams[index]
-      }).ToList();
+      gameEngine.Bidders = gameTmp.Bidders;
+      gameEngine.Teams = gameTmp.Teams;
+      gameEngine.Rides = gameTmp.Rides;
 
-
-      string[] NamesBidders = new[]
-      {
-         "Иван", "Петр", "Том Хэнкс", "Чача", "Лютый", "Брюс", "Ара", "Гиви"
-      };
-
-      gameEngine.Bidders = Enumerable.Range(0, NamesBidders.Length).Select(index => new Bidder
-      {
-        Id = (uint)index,
-        Name = NamesBidders[index],
-        StartScore = 1000,
-        CurrentScore = (uint)rng.Next(0, 1000)
-      }).ToList();
-
-      gameEngine.Rides = Enumerable.Range(0, 4).Select(index => new Ride
-      {
-        Id = (uint)index,
-        Number = (uint)index + 1,
-        Rates = new List<Rate>
-        {
-          new Rate { Id = 0, Bidder = new Bidder() { Id = 0 }, Team = 0, RateValue = 100 },
-          new Rate { Id = 1, Bidder = new Bidder() { Id = 1 }, Team = 1, RateValue = 100 },
-          new Rate { Id = 2, Bidder = new Bidder() { Id = 2 }, Team = 2, RateValue = 100 },
-          new Rate { Id = 3, Bidder = new Bidder() { Id = 3 }, Team = 3, RateValue = 100 },
-        },
-        WinnerTeams = new List<uint>
-        {
-          (uint)rng.Next(5),
-          (uint)rng.Next(5)
-        }
-      }).OrderByDescending(x => x.Number).ToList();
-
-      gameEngine.CalculateBiddersCurrentScore();
+      fileStream.Close();
     }
 
     public void Save()
     {
+      MemoryStream streamData = new MemoryStream();
+      DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Game));
+      ser.WriteObject(streamData, gameEngine);
 
+      streamData.Position = 0;
+      StreamReader sr = new StreamReader(streamData);
+
+      File.WriteAllText(dataFilePath, sr.ReadToEnd());
+      streamData.Close();
     }
   }
 }

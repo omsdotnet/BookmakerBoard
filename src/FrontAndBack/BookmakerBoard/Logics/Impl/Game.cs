@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using BookmakerBoard.Models;
 
 namespace BookmakerBoard.Logics.Impl
@@ -9,7 +10,9 @@ namespace BookmakerBoard.Logics.Impl
   {
     public List<Bidder> Bidders { get; set; }
 
+
     public List<Team> Teams { get; set; }
+
 
     public List<Ride> Rides { get; set; }
 
