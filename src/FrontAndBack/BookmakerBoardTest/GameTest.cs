@@ -2,8 +2,6 @@ using BookmakerBoard.Logics.Impl;
 using BookmakerBoard.Models;
 using NUnit.Framework;
 using System.Collections.Generic;
-using BookmakerBoard.Logics.Impl;
-using BookmakerBoard.Models;
 
 namespace Tests
 {
