@@ -26,6 +26,15 @@ namespace BookmakerBoard.Controllers
       return gameEngine.Bidders;
     }
 
+    [HttpGet("[action]")]
+    public IEnumerable<Bidder> GetTopThree()
+    {
+      return gameEngine.Bidders
+        .OrderByDescending(x => x.CurrentScore)
+        .Take(3);
+    }
+
+
     [HttpPut("{id}")]
     public IActionResult PutBidder([FromRoute] uint id, [FromBody] Bidder item)
     {
