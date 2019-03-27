@@ -1,8 +1,6 @@
-﻿using System;
+﻿using BookmakerBoard.Models;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
-using BookmakerBoard.Models;
 
 namespace BookmakerBoard.Logics.Impl
 {
@@ -26,6 +24,14 @@ namespace BookmakerBoard.Logics.Impl
 
       foreach (var item in Rides.OrderBy(x => x.Number))
       {
+        foreach(var rate in item.Rates)
+        {
+          rate.Bidder = Bidders.SingleOrDefault(x => x.Id == rate.Bidder.Id);
+        }
+
+        item.Rates = item.Rates.Where(x => x.Bidder != null).ToList();
+
+
         item.Calculate();
       }
     }
