@@ -30,6 +30,8 @@ namespace BookmakerBoard
       var sp = services.BuildServiceProvider();
       var storage = sp.GetService<IGameStorage>();
       storage.Load();
+      var game = sp.GetService<IGame>();
+      game.CalculateBiddersCurrentScore();
 
 
 
