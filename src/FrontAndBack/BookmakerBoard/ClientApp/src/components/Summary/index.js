@@ -1,5 +1,7 @@
-﻿import React, { Component, createRef } from 'react';
+﻿import React, { Component, createRef, Fragment } from 'react';
 import { ridesGetAll } from '../../services/rides';
+import { getTopTree } from '../../services/bidders';
+import { teamsGetAll } from '../../services/teams';
 import {
   Grid, Sticky, Ref, List,
   Segment, Header, Divider, Table, Label,
@@ -7,25 +9,57 @@ import {
 
 export class Home extends Component {
   contextRef = createRef();
+  timer = null;
+  interval = 5 * 60 * 1000;
 
   state = {
     rides: [],
+    topBidders: [],
     loading: true,
   };
 
+  init = () => {
+    getTopTree().then((data) => {
+      this.setState({ topBidders: data });
+    }).then(() => {
+      Promise.all([ridesGetAll(), teamsGetAll()])
+        .then(data => {
+          const rides = data[0];
+          const teams = data[1];
+
+          const mapRides = rides.map(p => ({
+            ...p,
+            winnerTeams: p.winnerTeams
+              .reduce((result, teamId) => [...result, ...[teams.find(i => i.id === teamId)]], [])
+              .filter(i => i),
+            rates: p.rates.map(rate => ({
+              ...rate,
+              team: teams.find(i => i.id === rate.team) || '',
+            })),
+          }));
+
+          this.setState({ rides: mapRides, loading: false });
+        }).catch(c => console.log(c));
+    });
+  }
+
   componentDidMount() {
-    ridesGetAll().then(data => {
-      this.setState({ rides: data, loading: false });
-    }).catch(c => console.log(c));
+    this.init();
+    this.timer = setInterval(() => this.init(), this.interval);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timer);
   }
 
   render() {
-    const contents = this.state.loading
+    const { loading, rides, topBidders } = this.state;
+    const contents = loading
       ? null
-      : this.state.rides;
+      : rides;
 
     return (
-      <Segment basic>
+      <Segment loading={loading} basic>
         <Segment.Inline>
           <Ref innerRef={this.contextRef}>
             <Grid columns={2}>
@@ -34,22 +68,30 @@ export class Home extends Component {
                   <Segment basic>
                     <Header>Лидеры</Header>
                     <Divider />
-                    <List divided relaxed size='large'>
-                      <List.Item>
-                        <List.Icon name='user' size='large' verticalAlign='middle' />
-                        <List.Content>
-                          <List.Header>Константин Густов</List.Header>
-                          <List.Description>+1000 очков</List.Description>
-                        </List.Content>
-                      </List.Item>
-                      <List.Item>
-                        <List.Icon name='user' size='large' verticalAlign='middle'>
-                        </List.Icon>
-                        <List.Content>
-                          <List.Header>Павел Кульбида</List.Header>
-                          <List.Description>+1000 очков</List.Description>
-                        </List.Content>
-                      </List.Item>
+                    <List relaxed size='large'>
+                      {topBidders && topBidders.map((item, key) => (
+                        <List.Item key={key}>
+                          <List.Icon name='user' size='large' verticalAlign='middle' />
+                          <List.Content>
+                            <List.Header as='h3'>{item.name}</List.Header>
+                            <List.Item>
+                              <div style={{ paddingBottom: '4px' }}>
+                                <span style={{ fontSize: '16px', fontWeight: 'bold' }}>Текущие очки: </span>
+                                <span>{item.currentScore}</span>
+                              </div>
+                            </List.Item>
+                            <List.Item>
+                              <div>
+                                <span style={{ fontSize: '16px', fontWeight: 'bold' }}>Начальные очки: </span>
+                                <span>{item.startScore}</span>
+                              </div>
+                            </List.Item>
+                          </List.Content>
+                          <List.Item>
+                            <Divider />
+                          </List.Item>
+                        </List.Item>
+                      ))}
                     </List>
                   </Segment>
                 </Sticky>
@@ -64,58 +106,58 @@ export class Home extends Component {
                     </Table.Row>
                   </Table.Header>
                   <Table.Body>
-                    {contents && contents.map(item => (
-                      <>
+                    {contents && contents.map((item, key) => (
+                      <Fragment key={key}>
                         <Table.Row error>
                           <Table.Cell>
                             <Label ribbon color="black">{`Заезд: ${item.number}`}</Label>
                           </Table.Cell>
                           <Table.Cell>
-                            <List as="ol">
-                              <List.Item as="li">
-                                Густов Константин
-                              </List.Item>
-                              <List.Item as="li">
-                                Павел Кульбида
-                              </List.Item>
-                            </List>
+                            {item.winnerTeams && item.winnerTeams.map((winner, key) => (
+                              <List key={key} as="ol">
+                                <List.Item as="li">
+                                  {winner.name}
+                                </List.Item>
+                              </List>
+                            ))}
                           </Table.Cell>
-                          <Table.Cell>Завершен</Table.Cell>
+                          <Table.Cell>
+                            {!item.winnerTeams.length ? 'Не завершен' : 'Завершен'}
+                          </Table.Cell>
                         </Table.Row>
                         <Table.Row>
                           <Segment basic>
                             <Header>Ставки:</Header>
                             <Divider />
-                            <List>
-                              <List.Item>
-                                <List horizontal size="medium">
-                                  <List.Item>
-                                    <List.Header>Павел Кульбида</List.Header>
-                                  </List.Item>
-                                  <List.Item>
-                                    <List.Icon name="long arrow alternate right" size="large" />
-                                  </List.Item>
-                                  <List.Item>
-                                    1000$
-                                  </List.Item>
-                                  <List.Item>
-                                    <List.Icon name="long arrow alternate right" size="large" />
-                                  </List.Item>
-                                  <List.Item>
-                                    <List.Header>Константин Густов</List.Header>
-                                  </List.Item>
-                                </List>
-                              </List.Item>
-                            </List>
+                            {item.rates && item.rates.map((rate, key) => (
+                              <List key={`c_${key}`}>
+                                <List.Item>
+                                  <List horizontal size="medium">
+                                    <List.Item>
+                                      <List.Header>{rate.bidder.name}</List.Header>
+                                    </List.Item>
+                                    <List.Item>
+                                      <List.Icon name="long arrow alternate right" size="large" />
+                                    </List.Item>
+                                    <List.Item>
+                                      {rate.rateValue}
+                                    </List.Item>
+                                    <List.Item>
+                                      <List.Icon name="long arrow alternate right" size="large" />
+                                    </List.Item>
+                                    <List.Item>
+                                      <List.Header>{rate.team.name}</List.Header>
+                                    </List.Item>
+                                  </List>
+                                </List.Item>
+                              </List>
+                            ))}
                           </Segment>
                         </Table.Row>
-                      </>
+                      </Fragment>
                     ))}
                   </Table.Body>
                 </Table>
-                {/* <Segment>
-                  {(new Array(150).fill(0).map(p => (<Header>Hello</Header>)))}
-                </Segment> */}
               </Grid.Column>
             </Grid>
           </Ref>

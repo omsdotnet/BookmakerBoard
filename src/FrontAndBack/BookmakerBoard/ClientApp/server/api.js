@@ -3,6 +3,7 @@ const express = require('express');
 const ridesResponse = require('./mock/rides.json');
 const teamsResponse = require('./mock/teams.json');
 const biddersResponse = require('./mock/bidders.json');
+const topTreeResponse = require('./mock/topTree.json');
 
 const router = express.Router();
 
@@ -25,6 +26,10 @@ const api = () => {
 
     router.post('/Teams', (req, res) => {
         res.status(200).json('OK');
+    });
+
+    router.get('/Bidders/GetTopThree', (req, res) => {
+        res.json(topTreeResponse);
     });
 
     return router;

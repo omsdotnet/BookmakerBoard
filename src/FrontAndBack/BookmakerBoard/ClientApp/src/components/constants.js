@@ -11,7 +11,7 @@ export const MENU_CONTAINER_ITEMS = [
         index: 0,
         key: 0,
         name: MENU_KEYS.SUMMARY,
-        active: false,
+        active: true,
     },
     {
         index: 1,
@@ -23,7 +23,7 @@ export const MENU_CONTAINER_ITEMS = [
         index: 2,
         key: 2,
         name: MENU_KEYS.TEAMS,
-        active: true,
+        active: false,
     },
     {
         index: 3,
