@@ -9,3 +9,27 @@ export const getTopTree = async () => {
     const result = await fetch(`${address}api/Bidders/GetTopThree`);
     return result.json();
 }
+
+export const bidderDelete = async (id) => {
+  return await fetch(`${address}api/Bidders/${id}`, { method: 'DELETE' });
+}
+
+export const bidderAdd = async (bidder) => {
+  return await fetch(`${address}api/Bidders`, {
+    body: JSON.stringify(bidder),
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    }
+  });
+}
+
+export const bidderPut = async (bidder) => {
+  return await fetch(`${address}api/Bidders/${bidder.id}`, {
+    body: JSON.stringify(bidder),
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    }
+  });
+}

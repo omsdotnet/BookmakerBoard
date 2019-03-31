@@ -1,93 +1,95 @@
 ﻿import React, { Component } from 'react';
 import { biddersGetAll } from '../../services/bidders';
 import { Segment, List, Grid, Table, Button, Divider } from 'semantic-ui-react';
+import BidderRow from './BidderRow';
 
 export class Bidders extends Component {
   state = {
     bidders: [],
-    loading: true
+    loading: true,
+    newBidder: null
   };
 
-  componentDidMount() {
-    biddersGetAll()
-      .then(data => {
-        this.setState({ bidders: data, loading: false });
-      });
+  bidderAll = () => {
+    this.setState({ loading: true });
+    biddersGetAll().then(data => {
+      this.setState({ bidders: data.map(p => ({ ...p, isExist: true })), loading: false });
+    }).catch(c => console.log(c));
   }
 
-  static renderTable(bidders) {
-    return (
-      <table className='table'>
-        <thead>
-          <tr>
-            <th>Имя</th>
-            <th>Начальный счет</th>
-            <th>Текущий счет</th>
-          </tr>
-        </thead>
-        <tbody>
-          {bidders.map(bidders =>
-            <tr key={bidders.id}>
-              <td>{bidders.name}</td>
-              <td>{bidders.startScore}</td>
-              <td>{bidders.currentScore}</td>
-            </tr>
-          )}
-        </tbody>
-      </table>
-    );
+  componentDidMount() {
+    this.bidderAll();
+  }
+
+  handleRemove = id => () => {
+    const { bidders, newBidder } = this.state;
+    this.setState({
+      bidders: bidders.filter(p => p.id !== id),
+      newBidder: newBidder === id ? null : newBidder,
+    });
+  }
+
+  handleSave = id => () => {
+    const { newBidder } = this.state;
+
+    this.setState({
+      newBidder: newBidder === id ? null : newBidder,
+    });
+
+    this.bidderAll();
+  }
+
+  handleAdd = () => {
+    const { bidders } = this.state;
+
+    this.setState({
+      bidders: [{ id: bidders.length, name: '', isExist: false }].concat(bidders),
+      newBidder: bidders.length,
+    });
   }
 
   render() {
-    let contents = this.state.loading
-      ? null
-      : this.state.bidders;
+    const { loading, bidders, newBidder } = this.state;
+    const contents = loading ? null : bidders;
 
     return (
-      <Segment basic>
-        <Segment.Inline>
-          <List>
-            <List.Item>
-              <List.Header>Участники ставок</List.Header>
-              <List.Description>Люди, которые делают ставки</List.Description>
-            </List.Item>
-          </List>
+      <>
+        <Segment loading={loading} basic>
           <Grid container>
             <Grid.Column>
-              <Table singleLine basic='very'>
+              <List>
+                <List.Item>
+                  <List.Header>Участники ставок</List.Header>
+                  <List.Description>Люди, которые делают ставки</List.Description>
+                </List.Item>
+              </List>
+              <Grid.Row>
+                <Button content="Добавить"
+                  color='blue'
+                  onClick={this.handleAdd}
+                  disabled={!!newBidder} />
+                <Divider />
+              </Grid.Row>
+              <Table celled basic='very'>
                 <Table.Header>
-                  <Button content="Редактировать" />
-                  <Button content="Сохранить" />
-                  <Button content="Отмена" />
-                  <Divider />
                   <Table.Row>
-                    <Table.HeaderCell width="8">Участник</Table.HeaderCell>
-                    <Table.HeaderCell width="7">Текущий счет</Table.HeaderCell>
-                    <Table.HeaderCell width="1" />
+                    <Table.HeaderCell width={14} content="Участник" />
+                    <Table.HeaderCell singleLine width={2} />
                   </Table.Row>
                 </Table.Header>
                 <Table.Body>
                   {(contents && contents.map(item => (
-                    <Table.Row key={item.id}>
-                      <Table.Cell>
-                        {item.name}
-                      </Table.Cell>
-                      <Table.Cell>
-                        {item.currentScore}
-                      </Table.Cell>
-                      <Table.Cell>
-                        <Button color='black'
-                          icon="remove"
-                          size="tiny" />
-                      </Table.Cell>
-                    </Table.Row>
-                  )))}
+                    <BidderRow id={item.id} name={item.name}
+                      isExist={item.isExist}
+                      handleRemove={this.handleRemove(item.id)}
+                      handleSave={this.handleSave(item.id)} />
+                  )))}                  
                 </Table.Body>
               </Table>
             </Grid.Column>
           </Grid>
-        </Segment.Inline>
-      </Segment>
+        </Segment>
+      </>      
     );
   }
 }
