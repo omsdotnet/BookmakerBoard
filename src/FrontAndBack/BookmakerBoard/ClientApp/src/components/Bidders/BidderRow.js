@@ -7,19 +7,20 @@ class BidderRow extends React.Component {
     state = {
         isChanged: false,
         bidderName: null,
+        bidderStartScore: 1000,
         isRemove: false,
         isSave: false,
     };
 
     handleSave = id => () => {
         const { isExist, handleSave: save } = this.props;
-        const { bidderName } = this.state;
+        const { bidderName, bidderStartScore } = this.state;
 
-        const newBidder = { id, name: bidderName };
+        const newBidder = { id, name: bidderName, startScore: bidderStartScore };
         if (isExist) {
             bidderPut(newBidder)
                 .then(() => {
-                    this.setState({ bidderName: '', isChanged: false, isSave: false });
+                    this.setState({ isChanged: false, isSave: false });
                     save(newBidder);
                 }).catch((error) => {
                     console.log(error);
@@ -28,7 +29,7 @@ class BidderRow extends React.Component {
         } else {
             bidderAdd(newBidder)
                 .then(() => {
-                    this.setState({ bidderName: '', isChanged: false, isSave: false });
+                    this.setState({ isChanged: false, isSave: false });
                     save(newBidder);
                 }).catch((error) => {
                     console.log(error);
@@ -51,20 +52,33 @@ class BidderRow extends React.Component {
         }
     }
 
-    handleChange = id => (_, { value }) => {
+    handleChangeName = id => (_, { value }) => {
         this.setState({ isChanged: true, bidderName: value });
     }
 
+    handleChangeScore = id => (_, { value }) => {
+        this.setState({ isChanged: true, bidderStartScore: value });
+    }
+
+
     render() {
         const { isChanged, isRemove, isSave } = this.state;
-        const { id, name } = this.props;
+        const { id, name, startScore, currentScore } = this.props;
 
         return (
             <Table.Row key={id}>
                 <Table.Cell>
                     <Input fluid
                         defaultValue={name}
-                        onChange={this.handleChange(id)} />
+                        onChange={this.handleChangeName(id)} />
+                </Table.Cell>
+                <Table.Cell>
+                    <Input fluid
+                      defaultValue={startScore}
+                      onChange={this.handleChangeScore(id)} />
+                </Table.Cell>
+                <Table.Cell>
+                      {currentScore}
                 </Table.Cell>
                 <Table.Cell>
                     <Button color='blue'
@@ -87,6 +101,8 @@ class BidderRow extends React.Component {
 BidderRow.propTypes = {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
+    startScore: PropTypes.string.isRequired,
+    currentScore: PropTypes.string.isRequired,
     isExist: PropTypes.bool.isRequired,
     handleRemove: PropTypes.func.isRequired,
     handleSave: PropTypes.func.isRequired,

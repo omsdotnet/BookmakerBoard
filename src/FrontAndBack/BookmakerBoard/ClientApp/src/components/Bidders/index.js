@@ -73,13 +73,18 @@ export class Bidders extends Component {
               <Table celled basic='very'>
                 <Table.Header>
                   <Table.Row>
-                    <Table.HeaderCell width={14} content="Участник" />
-                    <Table.HeaderCell singleLine width={2} />
+                    <Table.HeaderCell singleLine content="Участник" />
+                    <Table.HeaderCell singleLine content="Начальный счет" />
+                    <Table.HeaderCell singleLine content="Текущий счет" />
+                    <Table.HeaderCell singleLine content="Действие" />
                   </Table.Row>
                 </Table.Header>
                 <Table.Body>
                   {(contents && contents.map(item => (
-                    <BidderRow id={item.id} name={item.name}
+                    <BidderRow id={item.id}
+                      name={item.name}
+                      startScore={item.startScore}
+                      currentScore={item.currentScore}
                       isExist={item.isExist}
                       handleRemove={this.handleRemove(item.id)}
                       handleSave={this.handleSave(item.id)} />
