@@ -11,13 +11,13 @@ export const MENU_CONTAINER_ITEMS = [
         index: 0,
         key: 0,
         name: MENU_KEYS.SUMMARY,
-        active: true,
+        active: false,
     },
     {
         index: 1,
         key: 1,
         name: MENU_KEYS.RIDES,
-        active: false,
+        active: true,
     },
     {
         index: 2,
