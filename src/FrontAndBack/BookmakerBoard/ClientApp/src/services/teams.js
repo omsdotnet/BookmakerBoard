@@ -18,3 +18,13 @@ export const teamAdd = async (team) => {
         }
     });
 }
+
+export const teamPut = async (team) => {
+    return await fetch(`${address}api/Teams/${team.id}`, {
+        body: JSON.stringify(team),
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    });
+}

@@ -23,13 +23,13 @@ export const MENU_CONTAINER_ITEMS = [
         index: 2,
         key: 2,
         name: MENU_KEYS.TEAMS,
-        active: false,
+        active: true,
     },
     {
         index: 3,
         key: 3,
         name: MENU_KEYS.PARTICIPANTS,
-        active: true,
+        active: false,
     },
     {
         index: 4,
