@@ -113,13 +113,13 @@ export class Home extends Component {
                             <Label ribbon color="black">{`Заезд: ${item.number}`}</Label>
                           </Table.Cell>
                           <Table.Cell>
-                            {item.winnerTeams && item.winnerTeams.map((winner, key) => (
-                              <List key={key} as="ol">
-                                <List.Item as="li">
+                            <List key={key} as="ol">
+                              {item.winnerTeams && item.winnerTeams.map((winner, key) => (
+                                <List.Item key={key} as="li">
                                   {winner.name}
                                 </List.Item>
-                              </List>
-                            ))}
+                              ))}
+                            </List>
                           </Table.Cell>
                           <Table.Cell>
                             {!item.winnerTeams.length ? 'Не завершен' : 'Завершен'}
@@ -129,9 +129,9 @@ export class Home extends Component {
                           <Segment basic>
                             <Header>Ставки:</Header>
                             <Divider />
-                            {item.rates && item.rates.map((rate, key) => (
-                              <List key={`c_${key}`}>
-                                <List.Item>
+                            <List>
+                              {item.rates && item.rates.map((rate, key) => (
+                                <List.Item key={key}>
                                   <List horizontal size="medium">
                                     <List.Item>
                                       <List.Header>{rate.bidder.name}</List.Header>
@@ -150,8 +150,8 @@ export class Home extends Component {
                                     </List.Item>
                                   </List>
                                 </List.Item>
-                              </List>
-                            ))}
+                              ))}
+                            </List>
                           </Segment>
                         </Table.Row>
                       </Fragment>
