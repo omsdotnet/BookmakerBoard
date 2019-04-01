@@ -190,6 +190,7 @@ export class Rides extends Component {
     const isRide = (contents && contents.rates) || false;
     const ridesOptions = ridesList.map((p, key) => ({ key, value: p.id, text: p.number }));
     const biddersOptions = bidders.map((p, key) => ({ key, value: p.id, text: p.name }));
+    const wins = rides.winnerTeams;
 
     return (
       <Segment loading={loading} basic>
@@ -237,6 +238,7 @@ export class Rides extends Component {
                 selection
                 disabled={!isRide}
                 options={biddersOptions}
+                value={wins}
                 onChange={this.handleBidderChange} />
             </List.Item>
           </List>
