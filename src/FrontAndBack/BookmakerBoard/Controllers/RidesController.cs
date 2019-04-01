@@ -26,6 +26,21 @@ namespace BookmakerBoard.Controllers
       return gameEngine.Rides;
     }
 
+    [HttpGet("[action]/{id}")]
+    public IActionResult GetById(uint id)
+    {
+      var element = gameEngine.Rides.SingleOrDefault(x => x.Id == id);
+
+      if (element == null)
+      {
+        return NotFound();
+      }
+
+      return Ok(element);
+    }
+
+
+
     [HttpPut("{id}")]
     public IActionResult PutRide([FromRoute] uint id, [FromBody] Ride item)
     {

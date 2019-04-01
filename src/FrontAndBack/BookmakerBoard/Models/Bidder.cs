@@ -13,6 +13,6 @@ namespace BookmakerBoard.Models
 
     public uint StartScore { get; set; }
 
-    public ulong CurrentScore { get; set; }
+    public long CurrentScore { get; set; }
   }
 }

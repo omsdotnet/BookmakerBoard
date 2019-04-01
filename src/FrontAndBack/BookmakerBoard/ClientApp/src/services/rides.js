@@ -6,6 +6,11 @@ export const ridesGetAll = async () => {
     return result.json();
 };
 
+export const ridesGetById = async (id) => {
+  const result = await fetch(`${address}api/Rides/GetById/${id}`);
+  return result.json();
+};
+
 export const ridesDelete = async (id) => {
     return await fetch(`${address}api/Rides/${id}`, { method: 'DELETE' });
 };
