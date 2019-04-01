@@ -10,7 +10,7 @@ import {
 export class Home extends Component {
   contextRef = createRef();
   timer = null;
-  interval = 5 * 60 * 1000;
+  interval = 1 * 60 * 1000;
 
   state = {
     rides: [],

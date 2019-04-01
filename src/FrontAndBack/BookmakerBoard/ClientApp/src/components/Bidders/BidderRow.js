@@ -7,7 +7,7 @@ class BidderRow extends React.Component {
     state = {
         isChanged: false,
         bidderName: null,
-        bidderStartScore: 1000,
+        bidderStartScore: null,
         isRemove: false,
         isSave: false,
     };
