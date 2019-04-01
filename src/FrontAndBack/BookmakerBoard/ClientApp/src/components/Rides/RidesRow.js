@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Table, Dropdown, Input, Button } from 'semantic-ui-react';
-import { ridesDelete, ridesCreate, ridesPut } from '../../services/rides';
+import { ridesPut } from '../../services/rides';
 
 class RidesRow extends React.Component {
     state = {
@@ -22,6 +22,7 @@ class RidesRow extends React.Component {
                     .map((item, key) => ({ key, value: item.id, text: item.name })),
                 teamsOptions: props.teams.map((item, key) => ({ key, value: item.id, text: item.name })),
                 newRate: {
+                    ...props.ride.rates[0],
                     bidder: {
                         id: bidder ? bidder.id : -1,
                         name: bidder ? bidder.name : '',
@@ -38,18 +39,8 @@ class RidesRow extends React.Component {
     }
 
     handleRemove = () => {
-        const { isExist, id, handleRemove } = this.props;
-
-        if (isExist) {
-            this.setState({ isRemove: true });
-            ridesDelete(id)
-                .then(() => {
-                    this.setState({ isRemove: false });
-                    handleRemove(id);
-                }).catch(() => this.setState({ isRemove: false }))
-        } else {
-            handleRemove(id);
-        }
+        const { id, handleRemove } = this.props;
+        handleRemove(id);
     }
 
     handleBidder = (_, { value }) => {
@@ -95,39 +86,27 @@ class RidesRow extends React.Component {
     }
 
     handleSave = () => {
-        const { handleSave, ride, id } = this.props;
+        const { handleSave, ride } = this.props;
         const { newRate } = this.state;
 
         const newRide = {
-            id: id,
-            number: ride ? ride.number : 1,
-            winnerTeams: ride && ride.winnerTeams ? ride.winnerTeams : [],
-            rates: (ride.rates || []).concat([newRate]),
+            ...ride,
+            rates: ride.rates.map((p, i) => i === 0 ? newRate : p),
         };
 
         this.setState({ isSave: true });
-        if (ride && ride.number) {
-            ridesPut(newRide).then(() => {
-                this.setState({ isChange: false, isSave: false });
-                handleSave({ newRate });
-            }).catch(() => {
-                this.setState({ isChange: false, isSave: false });
-            });
-        } else {
-            ridesCreate(newRide)
-                .then(() => {
-                    this.setState({ isChange: false, isSave: false });
-                    handleSave({ newRate });
-                })
-                .catch(() => this.setState({ isChange: false, isSave: false }));
-        }
+        ridesPut(newRide).then(() => {
+            this.setState({ isChange: false, isSave: false });
+            handleSave({ newRate });
+        }).catch(() => {
+            this.setState({ isChange: false, isSave: false });
+        });
     }
 
     render() {
         const {
             biddersOptions,
             teamsOptions,
-            isRemove,
             isSave,
             newRate,
             isChange,
@@ -174,7 +153,6 @@ class RidesRow extends React.Component {
                     <Button color='red'
                         icon="remove"
                         size="medium"
-                        loading={isRemove}
                         onClick={this.handleRemove} />
                 </Table.Cell>
             </Table.Row>
