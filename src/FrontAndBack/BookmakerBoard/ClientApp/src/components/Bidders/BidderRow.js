@@ -13,10 +13,15 @@ class BidderRow extends React.Component {
     };
 
     handleSave = id => () => {
-        const { isExist, handleSave: save } = this.props;
+        const { name, startScore, isExist, handleSave: save } = this.props;
         const { bidderName, bidderStartScore } = this.state;
 
-        const newBidder = { id, name: bidderName, startScore: bidderStartScore };
+      const newBidder = {
+        id,
+        name: bidderName ? bidderName : name,
+        startScore: bidderStartScore ? bidderStartScore : startScore
+      };
+
         if (isExist) {
             bidderPut(newBidder)
                 .then(() => {

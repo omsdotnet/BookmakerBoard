@@ -110,7 +110,7 @@ export class Home extends Component {
                       <Fragment key={key}>
                         <Table.Row error>
                           <Table.Cell>
-                            <Label ribbon color="black">{`Заезд: ${item.number}`}</Label>
+                            <Label ribbon color="black">{`Заезд: ${item.number + 1}`}</Label>
                           </Table.Cell>
                           <Table.Cell>
                             <List key={key} as="ol">
