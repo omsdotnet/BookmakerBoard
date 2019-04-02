@@ -19,13 +19,11 @@ namespace BookmakerBoard.Models
     {
       foreach (var item in Rates)
       {
+        item.Bidder.CurrentScore -= item.RateValue;
+
         if (WinnerTeams.Contains(item.Team))
         {
           item.Bidder.CurrentScore += item.RateValue * 2;
-        }
-        else
-        {
-          item.Bidder.CurrentScore -= item.RateValue;
         }
       }
     }

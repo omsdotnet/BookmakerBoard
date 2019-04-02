@@ -139,7 +139,7 @@ export class Rides extends Component {
     });
   }
 
-  handleBidderChange = (_, { value }) => {
+  handleWinnersChange = (_, { value }) => {
     const { rides } = this.state;
     this.setState({
       rides: {
@@ -190,6 +190,7 @@ export class Rides extends Component {
     const isRide = (contents && contents.rates) || false;
     const ridesOptions = ridesList.map((p, key) => ({ key, value: p.id, text: p.number }));
     const biddersOptions = bidders.map((p, key) => ({ key, value: p.id, text: p.name }));
+    const teamsOptions = teams.map((p, key) => ({ key, value: p.id, text: p.name }));
     const wins = rides.winnerTeams;
 
     return (
@@ -237,9 +238,9 @@ export class Rides extends Component {
                 multiple
                 selection
                 disabled={!isRide}
-                options={biddersOptions}
+                options={teamsOptions}
                 value={wins}
-                onChange={this.handleBidderChange} />
+                onChange={this.handleWinnersChange} />
             </List.Item>
           </List>
           <Divider />
