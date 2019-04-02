@@ -23,7 +23,7 @@ namespace BookmakerBoard.Controllers
     [HttpGet("[action]")]
     public IEnumerable<Ride> GetAll()
     {
-      return gameEngine.Rides;
+      return gameEngine.Rides.OrderByDescending(x => x.Number);
     }
 
     [HttpGet("[action]/{id}")]
