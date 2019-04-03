@@ -43,7 +43,7 @@ export class Bidders extends Component {
     const { bidders } = this.state;
 
     this.setState({
-      bidders: [{ id: bidders.length, name: '', isExist: false }].concat(bidders),
+      bidders: [{ id: bidders.length, name: '', startScore: 1000, isExist: false }].concat(bidders),
       newBidder: bidders.length,
     });
   }

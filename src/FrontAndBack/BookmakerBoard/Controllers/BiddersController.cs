@@ -31,7 +31,7 @@ namespace BookmakerBoard.Controllers
     {
       return gameEngine.Bidders
         .OrderByDescending(x => x.CurrentScore)
-        .Take(3);
+        .Take(5);
     }
 
 
