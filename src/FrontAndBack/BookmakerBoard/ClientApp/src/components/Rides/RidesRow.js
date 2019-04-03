@@ -109,15 +109,14 @@ class RidesRow extends React.Component {
             teamsOptions,
             isSave,
             newRate,
-            isChange,
         } = this.state;
-        const { bidderId, rateScore, teamWin, isExist } = this.props;
-        const isEdit = !isExist ? newRate && newRate.bidder.id && newRate.bidder.id !== -1 &&
-            newRate.bidder.name && newRate.bidder.name !== '' &&
-            newRate.bidder.currentScore && newRate.bidder.currentScore !== 0 &&
-            newRate.bidder.startScore && newRate.bidder.startScore !== 0 &&
-            newRate.rateValue && newRate.rateValue !== 0 &&
-            newRate.team && newRate.team !== -1 : isExist ? isChange : false;
+        const { bidderId, rateScore, teamWin } = this.props;
+        const isEdit = newRate && newRate.bidder.id !== -1 &&
+            newRate.bidder.name !== '' &&
+            newRate.bidder.currentScore !== 0 &&
+            newRate.bidder.startScore !== 0 &&
+            newRate.rateValue !== 0 &&
+            newRate.team !== -1;
 
         return (
             <Table.Row>

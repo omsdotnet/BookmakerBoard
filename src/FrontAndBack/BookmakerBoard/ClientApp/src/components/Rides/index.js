@@ -6,7 +6,6 @@ import {
   Segment, Grid, List, Button,
   Divider, Table, Container,
   Dropdown,
-  Header,
 } from 'semantic-ui-react';
 import RidesRow from './RidesRow';
 
@@ -14,12 +13,28 @@ export class Rides extends Component {
   state = {
     ridesList: [],
     rides: {},
-    currentRide: 0,
+    currentRide: -1,
     bidders: [],
     teams: [],
     loading: true,
     newRateId: null,
   };
+
+  generateId = (arr) => {
+    if (!arr || arr.length === 0) {
+      return -1;
+    }
+
+    let num = 0;
+    for (let i = 0; i < arr.length; i++) {
+      const id = arr[i].id;
+      if (id > num) {
+        num = id;
+      }
+    }
+
+    return num;
+  }
 
   componentDidMount() {
     this.setState({ loading: true });
@@ -36,7 +51,11 @@ export class Rides extends Component {
           teams,
           loading: false,
           ridesList: rides,
-          currentRide: ride.number
+          currentRide: ride && ride.id,
+          rides: {
+            ...ride,
+            rates: ride.rates.map(p => ({ ...p, isExist: true }))
+          }
         });
       }).catch((err) => {
         console.log(err);
@@ -53,7 +72,7 @@ export class Rides extends Component {
           rides: {
             ...ride,
             rates: !isDefault ? ride.rates.map(p => ({ ...p, isExist: true })) : null,
-          }, 
+          },
           loading: false,
           ridesList: !isDefault ? this.state.ridesList : response,
         });
@@ -104,7 +123,7 @@ export class Rides extends Component {
   handleRide = () => {
     const { ridesList } = this.state;
 
-    const newID = ridesList.length;
+    const newID = this.generateId(ridesList) === -1 ? 0 : this.generateId(ridesList) + 1;
     const ride = {
       id: newID,
       number: newID,
@@ -131,7 +150,7 @@ export class Rides extends Component {
     const { ridesList } = this.state;
     const ride = ridesList.find(p => p.id === value);
     this.setState({
-      currentRide: ride ? ride.number : 0,
+      currentRide: value,
       rides: {
         ...ride,
         rates: ride.rates ? ride.rates.map(p => ({ ...p, isExist: true })) : []
@@ -156,7 +175,7 @@ export class Rides extends Component {
     ridesPut(rides).then(() => {
       this.setState({
         loading: false,
-        ridesList: ridesList.map((p, i) => p.id === rides ? rides : p),
+        ridesList: ridesList.map(p => p.id === rides ? rides : p),
       });
     }).catch(() => {
       this.setState({ loading: false });
@@ -169,7 +188,13 @@ export class Rides extends Component {
     this.setState({ loading: true });
     ridesDelete(rides.id)
       .then(() => {
-        this.setState({ loading: false, ridesList: ridesList.filter(p => p.id !== rides.id) });
+        const newRidesList = ridesList.filter(p => p.id !== rides.id);
+
+        this.setState({
+          ridesList: newRidesList,
+          loading: false,
+          currentRide: -1,
+        });
         this.getRides(true);
       }).catch(() => {
         this.setState({ loading: false });
@@ -187,11 +212,10 @@ export class Rides extends Component {
       ? null
       : rides;
 
-    const isRide = (contents && contents.rates) || false;
+    const isRide = currentRide !== -1;
     const ridesOptions = ridesList.map((p, key) => ({ key, value: p.id, text: p.number }));
-    const biddersOptions = bidders.map((p, key) => ({ key, value: p.id, text: p.name }));
     const teamsOptions = teams.map((p, key) => ({ key, value: p.id, text: p.name }));
-    const wins = rides.winnerTeams;
+    const wins = rides.winnerTeams || [];
 
     return (
       <Segment loading={loading} basic>
@@ -222,25 +246,33 @@ export class Rides extends Component {
           <Divider />
           <List horizontal>
             <List.Item>
-              <Header>
-                {`Номер заезда:  `}
-                <Header.Content>
-                  <Dropdown fluid
-                    options={ridesOptions}
-                    value={currentRide}
-                    onChange={this.handleRideChange} />
-                </Header.Content>
-              </Header>
+              <List.Header>
+                Номер заезда:
+              </List.Header>
+              <List.Description>
+                <Dropdown fluid
+                  options={ridesOptions}
+                  value={currentRide}
+                  selection
+                  placeholder="Номер заезда:"
+                  onChange={this.handleRideChange} />
+              </List.Description>
             </List.Item>
             <List.Item>
-              <Dropdown fluid header="Список победителей:"
-                basic
-                multiple
-                selection
-                disabled={!isRide}
-                options={teamsOptions}
-                value={wins}
-                onChange={this.handleWinnersChange} />
+              <List.Header>
+                Список победителей:
+              </List.Header>
+              <List.Description>
+                <Dropdown fluid
+                  basic
+                  multiple
+                  selection
+                  disabled={!isRide}
+                  options={teamsOptions}
+                  value={wins}
+                  placeholder="Список победителей:"
+                  onChange={this.handleWinnersChange} />
+              </List.Description>
             </List.Item>
           </List>
           <Divider />
