@@ -109,6 +109,7 @@ class RidesRow extends React.Component {
             teamsOptions,
             isSave,
             newRate,
+            isChange
         } = this.state;
         const { bidderId, rateScore, teamWin } = this.props;
         const isEdit = newRate && newRate.bidder.id !== -1 &&
@@ -116,7 +117,7 @@ class RidesRow extends React.Component {
             newRate.bidder.currentScore !== 0 &&
             newRate.bidder.startScore !== 0 &&
             newRate.rateValue !== 0 &&
-            newRate.team !== -1;
+            newRate.team !== -1 && isChange;
 
         return (
             <Table.Row>
