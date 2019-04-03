@@ -51,10 +51,10 @@ export class Rides extends Component {
           teams,
           loading: false,
           ridesList: rides,
-          currentRide: ride && ride.id,
+          currentRide: ride && ride.id ? ride.id: -1,
           rides: {
             ...ride,
-            rates: ride.rates.map(p => ({ ...p, isExist: true }))
+            rates: ride && ride.rates ? ride.rates.map(p => ({ ...p, isExist: true })) : []
           }
         });
       }).catch((err) => {
@@ -238,7 +238,7 @@ export class Rides extends Component {
           <Button content="Сохранить заезд"
             color='red'
             onClick={this.handleSaveRide}
-            disabled={!isRide} />
+            disabled={!isRide ? true : newRateId !== null} />
           <Button content="Удалить"
             color='red'
             onClick={this.handleDeleteRide}
