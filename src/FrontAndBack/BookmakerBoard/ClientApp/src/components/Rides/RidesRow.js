@@ -123,6 +123,7 @@ class RidesRow extends React.Component {
             <Table.Row>
                 <Table.Cell>
                     <Dropdown fluid
+        				scrolling
                         direction='right'
                         options={biddersOptions}
                         defaultValue={bidderId}
@@ -138,6 +139,7 @@ class RidesRow extends React.Component {
                 </Table.Cell>
                 <Table.Cell>
                     <Dropdown fluid
+                        scrolling
                         direction='right'
                         options={teamsOptions}
                         defaultValue={teamWin}
