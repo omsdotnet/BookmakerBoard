@@ -1,0 +1,50 @@
+[
+    {
+        "id": 0,
+        "name": "Иван",
+        "startScore": 1000,
+        "currentScore": 1000
+    },
+    {
+        "id": 1,
+        "name": "Петр",
+        "startScore": 1000,
+        "currentScore": 1000
+    },
+    {
+        "id": 2,
+        "name": "Том Хэнкс",
+        "startScore": 1000,
+        "currentScore": 1000
+    },
+    {
+        "id": 3,
+        "name": "Чача",
+        "startScore": 1000,
+        "currentScore": 1000
+    },
+    {
+        "id": 4,
+        "name": "Лютый",
+        "startScore": 1000,
+        "currentScore": 1000
+    },
+    {
+        "id": 5,
+        "name": "Брюс",
+        "startScore": 1000,
+        "currentScore": 1000
+    },
+    {
+        "id": 6,
+        "name": "Ара",
+        "startScore": 1000,
+        "currentScore": 1000
+    },
+    {
+        "id": 7,
+        "name": "Гиви",
+        "startScore": 1000,
+        "currentScore": 1000
+    }
+]

@@ -47,7 +47,7 @@ namespace Tests
     {
       gameEngine.CalculateBiddersCurrentScore();
 
-      Assert.AreEqual(1200, gameEngine.Bidders[0].CurrentScore);
+      Assert.AreEqual(1100, gameEngine.Bidders[0].CurrentScore);
       Assert.AreEqual(900,  gameEngine.Bidders[1].CurrentScore);
     }
   }

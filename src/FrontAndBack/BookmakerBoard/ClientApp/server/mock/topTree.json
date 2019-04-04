@@ -1,0 +1,20 @@
+[
+    {
+        "id": 0,
+        "name": "Иван",
+        "startScore": 1000,
+        "currentScore": 1000
+    },
+    {
+        "id": 1,
+        "name": "Петр",
+        "startScore": 1000,
+        "currentScore": 1000
+    },
+    {
+        "id": 2,
+        "name": "Том Хэнкс",
+        "startScore": 1000,
+        "currentScore": 1000
+    }
+]

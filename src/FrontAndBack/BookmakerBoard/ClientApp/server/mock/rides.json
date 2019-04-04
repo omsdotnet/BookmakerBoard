@@ -1,0 +1,218 @@
+[
+    {
+        "id": 3,
+        "number": 4,
+        "winnerTeams": [
+            3,
+            1
+        ],
+        "rates": [
+            {
+                "id": 0,
+                "bidder": {
+                    "id": 0,
+                    "name": null,
+                    "startScore": 0,
+                    "currentScore": 18446744073709551516
+                },
+                "team": 0,
+                "rateValue": 100
+            },
+            {
+                "id": 1,
+                "bidder": {
+                    "id": 1,
+                    "name": null,
+                    "startScore": 0,
+                    "currentScore": 200
+                },
+                "team": 1,
+                "rateValue": 100
+            },
+            {
+                "id": 2,
+                "bidder": {
+                    "id": 2,
+                    "name": null,
+                    "startScore": 0,
+                    "currentScore": 18446744073709551516
+                },
+                "team": 2,
+                "rateValue": 100
+            },
+            {
+                "id": 3,
+                "bidder": {
+                    "id": 3,
+                    "name": null,
+                    "startScore": 0,
+                    "currentScore": 200
+                },
+                "team": 3,
+                "rateValue": 100
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "number": 3,
+        "winnerTeams": [
+            4,
+            1
+        ],
+        "rates": [
+            {
+                "id": 0,
+                "bidder": {
+                    "id": 0,
+                    "name": null,
+                    "startScore": 0,
+                    "currentScore": 18446744073709551516
+                },
+                "team": 0,
+                "rateValue": 100
+            },
+            {
+                "id": 1,
+                "bidder": {
+                    "id": 1,
+                    "name": null,
+                    "startScore": 0,
+                    "currentScore": 200
+                },
+                "team": 1,
+                "rateValue": 100
+            },
+            {
+                "id": 2,
+                "bidder": {
+                    "id": 2,
+                    "name": null,
+                    "startScore": 0,
+                    "currentScore": 18446744073709551516
+                },
+                "team": 2,
+                "rateValue": 100
+            },
+            {
+                "id": 3,
+                "bidder": {
+                    "id": 3,
+                    "name": null,
+                    "startScore": 0,
+                    "currentScore": 18446744073709551516
+                },
+                "team": 3,
+                "rateValue": 100
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "number": 2,
+        "winnerTeams": [
+            2,
+            2
+        ],
+        "rates": [
+            {
+                "id": 0,
+                "bidder": {
+                    "id": 0,
+                    "name": null,
+                    "startScore": 0,
+                    "currentScore": 18446744073709551516
+                },
+                "team": 0,
+                "rateValue": 100
+            },
+            {
+                "id": 1,
+                "bidder": {
+                    "id": 1,
+                    "name": null,
+                    "startScore": 0,
+                    "currentScore": 18446744073709551516
+                },
+                "team": 1,
+                "rateValue": 100
+            },
+            {
+                "id": 2,
+                "bidder": {
+                    "id": 2,
+                    "name": null,
+                    "startScore": 0,
+                    "currentScore": 200
+                },
+                "team": 2,
+                "rateValue": 100
+            },
+            {
+                "id": 3,
+                "bidder": {
+                    "id": 3,
+                    "name": null,
+                    "startScore": 0,
+                    "currentScore": 18446744073709551516
+                },
+                "team": 3,
+                "rateValue": 100
+            }
+        ]
+    },
+    {
+        "id": 0,
+        "number": 1,
+        "winnerTeams": [
+            4,
+            4
+        ],
+        "rates": [
+            {
+                "id": 0,
+                "bidder": {
+                    "id": 0,
+                    "name": null,
+                    "startScore": 0,
+                    "currentScore": 18446744073709551516
+                },
+                "team": 0,
+                "rateValue": 100
+            },
+            {
+                "id": 1,
+                "bidder": {
+                    "id": 1,
+                    "name": null,
+                    "startScore": 0,
+                    "currentScore": 18446744073709551516
+                },
+                "team": 1,
+                "rateValue": 100
+            },
+            {
+                "id": 2,
+                "bidder": {
+                    "id": 2,
+                    "name": null,
+                    "startScore": 0,
+                    "currentScore": 18446744073709551516
+                },
+                "team": 2,
+                "rateValue": 100
+            },
+            {
+                "id": 3,
+                "bidder": {
+                    "id": 3,
+                    "name": null,
+                    "startScore": 0,
+                    "currentScore": 18446744073709551516
+                },
+                "team": 3,
+                "rateValue": 100
+            }
+        ]
+    }
+]
