@@ -254,6 +254,7 @@ export class Rides extends Component {
                   options={ridesOptions}
                   value={currentRide}
                   selection
+                  scrolling
                   placeholder="Номер заезда:"
                   onChange={this.handleRideChange} />
               </List.Description>
@@ -267,6 +268,7 @@ export class Rides extends Component {
                   basic
                   multiple
                   selection
+                  scrolling
                   disabled={!isRide}
                   options={teamsOptions}
                   value={wins}
