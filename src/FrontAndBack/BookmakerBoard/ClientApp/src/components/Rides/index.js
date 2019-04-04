@@ -126,7 +126,7 @@ export class Rides extends Component {
     const newID = this.generateId(ridesList) === -1 ? 0 : this.generateId(ridesList) + 1;
     const ride = {
       id: newID,
-      number: newID,
+      number: newID + 1,
       winnerTeams: [],
       rates: []
     };
