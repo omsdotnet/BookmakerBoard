@@ -137,7 +137,7 @@ export class Rides extends Component {
         this.setState({
           rides: ride,
           loading: false,
-          ridesList: [...ridesList, ...[ride]],
+            ridesList: [...[ride], ...ridesList],
           currentRide: newID,
         });
       }).catch((err) => {
