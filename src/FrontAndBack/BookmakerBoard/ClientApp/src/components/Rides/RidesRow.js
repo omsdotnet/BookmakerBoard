@@ -11,7 +11,6 @@ class RidesRow extends React.Component {
         isRemove: false,
         newRate: {},
         isChange: false,
-        validateError: false,
     };
 
     static getDerivedStateFromProps = (props, state) => {
@@ -71,9 +70,6 @@ class RidesRow extends React.Component {
                 rateValue: parseInt(value),
             },
             isChange: true,
-            validateError: newRate.bidder.currentScore !== 0 ?
-                newRate.bidder.currentScore < value :
-                false
         });
     }
 
@@ -114,7 +110,6 @@ class RidesRow extends React.Component {
             isSave,
             newRate,
             isChange,
-            validateError,
         } = this.state;
         const { bidderId, rateScore, teamWin } = this.props;
         const isEdit = newRate && newRate.bidder.id !== -1 &&
@@ -123,6 +118,8 @@ class RidesRow extends React.Component {
             newRate.bidder.startScore !== 0 &&
             newRate.rateValue !== 0 &&
             newRate.team !== -1 && isChange;
+
+        const isValidScore = newRate ? newRate.bidder.currentScore < newRate.rateValue : false;
 
         return (
             <Table.Row>
@@ -141,7 +138,7 @@ class RidesRow extends React.Component {
                     <Input fluid
                         defaultValue={rateScore}
                         onChange={this.handleRate}
-                        error={validateError} />
+                        error={isValidScore} />
                 </Table.Cell>
                 <Table.Cell>
                     <Dropdown fluid
