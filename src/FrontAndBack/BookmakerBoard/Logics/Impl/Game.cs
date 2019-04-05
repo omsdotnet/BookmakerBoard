@@ -31,10 +31,7 @@ namespace BookmakerBoard.Logics.Impl
 
         item.Rates = item.Rates.Where(x => x.Bidder != null).ToList();
 
-        if(item.WinnerTeams.Any())
-        {
-          item.Calculate();
-        }
+        item.Calculate();
       }
     }
   }
