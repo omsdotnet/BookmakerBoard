@@ -2,10 +2,12 @@ using System.Collections.Generic;
 using System.Linq;
 using BookmakerBoard.Logics;
 using BookmakerBoard.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookmakerBoard.Controllers
 {
+  [Authorize]
   [Route("api/[controller]")]
   public class BiddersController : Controller
   {
@@ -16,17 +18,19 @@ namespace BookmakerBoard.Controllers
       IGame game,
       IGameStorage gameStorage)
     {
-      this.gameEngine = game;
+      gameEngine = game;
       this.gameStorage = gameStorage;
     }
 
     [HttpGet("[action]")]
+    [AllowAnonymous]
     public IEnumerable<Bidder> GetAll()
     {
       return gameEngine.Bidders;
     }
 
     [HttpGet("[action]")]
+    [AllowAnonymous]
     public IEnumerable<Bidder> GetTopThree()
     {
       return gameEngine.Bidders
@@ -40,7 +44,7 @@ namespace BookmakerBoard.Controllers
     {
       var element = gameEngine.Bidders.SingleOrDefault(x => x.Id == id);
 
-      if(element == null)
+      if (element == null)
       {
         return NotFound();
       }

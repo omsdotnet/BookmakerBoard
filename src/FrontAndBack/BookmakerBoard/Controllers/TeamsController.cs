@@ -3,9 +3,11 @@ using System.Linq;
 using BookmakerBoard.Models;
 using BookmakerBoard.Logics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BookmakerBoard.Controllers
 {
+  [Authorize]
   [Route("api/[controller]")]
   public class TeamsController : Controller
   {
@@ -21,6 +23,7 @@ namespace BookmakerBoard.Controllers
     }
 
     [HttpGet("[action]")]
+    [AllowAnonymous]
     public IEnumerable<Team> GetAll()
     {
       return gameEngine.Teams;
@@ -28,6 +31,7 @@ namespace BookmakerBoard.Controllers
     }
 
     [HttpPut("{id}")]
+    [AllowAnonymous]
     public IActionResult PutTeam([FromRoute] uint id, [FromBody] Team item)
     {
       var element = gameEngine.Teams.SingleOrDefault(x => x.Id == id);
