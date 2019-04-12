@@ -6,3 +6,6 @@ tools/*
 Reports/*
 Build/.sonar*
 .vscode*
+*.PublishSettings
+/src/.vs
+/src/*.user
