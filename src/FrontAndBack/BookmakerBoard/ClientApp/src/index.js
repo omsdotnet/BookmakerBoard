@@ -12,6 +12,13 @@ import Container from './components/container';
 // import registerServiceWorker from './registerServiceWorker';
 
 import 'semantic-ui-css/semantic.min.css';
+import 'semantic-ui-css/components/button.min.css';
+import 'semantic-ui-css/components/form.min.css';
+import 'semantic-ui-css/components/segment.min.css';
+import 'semantic-ui-css/components/image.min.css';
+import 'semantic-ui-css/components/input.min.css';
+import 'semantic-ui-css/components/header.min.css';
+import 'semantic-ui-css/components/grid.min.css';
 
 const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 const rootElement = document.getElementById('root');

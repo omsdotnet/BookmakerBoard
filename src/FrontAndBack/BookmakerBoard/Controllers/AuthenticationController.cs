@@ -1,32 +1,92 @@
 ﻿using System;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using BookmakerBoard.Logics;
-using BookmakerBoard.Models;
 
 namespace BookmakerBoard.Controllers
 {
   [Route("api/[controller]")]
-  public class AuthenticationController : Controller
+      [Authorize]
+  public class AuthenticationController : ControllerBase
   {
-    private readonly IScrambler scramblerData;
+    private readonly UserManager<IdentityUser> userManager;
+    private readonly SignInManager<IdentityUser> signInManager;
 
-    public AuthenticationController(IScrambler scrambler)
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="userManager"></param>
+    /// <param name="signInManager"></param>
+    public AuthenticationController(UserManager<IdentityUser> userManager,
+            SignInManager<IdentityUser> signInManager)
     {
-      scramblerData = scrambler;
+      this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
+      this.signInManager = signInManager ?? throw new ArgumentNullException(nameof(signInManager));
     }
 
-    [HttpGet("[action]")]
-    public AuthenticationResult Login(string name, string password)
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="login"></param>
+    /// <param name="password"></param>
+    /// <returns></returns>
+    [HttpPost("[action]")]
+    [AllowAnonymous]
+    public async Task<IActionResult> Login(string login, string password)
     {
-      string adminHash = @"soѯѿѿѿѫѵrookeѻѿѿѿѿco";
-        
-      return new AuthenticationResult()
+      var user = await userManager.FindByNameAsync(login);
+      var result = await signInManager.CheckPasswordSignInAsync(user, password, false);
+
+      if (result.Succeeded)
       {
-        Authentificated = scramblerData.GetHash(name, password) == adminHash,
+        var userPrincipal = await signInManager.CreateUserPrincipalAsync(user);
+        await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, userPrincipal,
+          new AuthenticationProperties
+          {
+            ExpiresUtc = DateTime.UtcNow.AddMinutes(20),
+            IsPersistent = false,
+            AllowRefresh = false
+          });
 
-        Key = Guid.NewGuid().ToString()
-      };
+        return Ok();
+      }
+      else
+      {
+        return BadRequest("Invalid login/password attempt.");
+      }
     }
 
+    /// <summary>
+    /// Gets a value that indicates whether the user has been authenticated.
+    /// </summary>
+    /// <returns>
+    /// true if the user was authenticated; otherwise, false.
+    /// </returns>
+    [HttpGet("[action]")]
+    [AllowAnonymous]
+    public Task<bool> IsSignIn()
+    {
+      return Task.FromResult(HttpContext.User.Identity.IsAuthenticated);
+    }
+
+
+    /// <summary>
+    /// Sign out the specified authentication scheme.
+    /// </summary>
+    /// <returns>A task.</returns>
+    [HttpGet("[action]")]
+    public Task Logout()
+    {
+      return HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme,
+        new AuthenticationProperties
+        {
+          ExpiresUtc = DateTime.UtcNow.AddMinutes(20),
+          IsPersistent = false,
+          AllowRefresh = false
+        });
+    }
   }
 }

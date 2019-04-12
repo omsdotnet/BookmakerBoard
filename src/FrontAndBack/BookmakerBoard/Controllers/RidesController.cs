@@ -2,10 +2,12 @@ using System.Collections.Generic;
 using System.Linq;
 using BookmakerBoard.Logics;
 using BookmakerBoard.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookmakerBoard.Controllers
 {
+  [Authorize]
   [Route("api/[controller]")]
   public class RidesController : Controller
   {
@@ -21,12 +23,14 @@ namespace BookmakerBoard.Controllers
     }
 
     [HttpGet("[action]")]
+    [AllowAnonymous]
     public IEnumerable<Ride> GetAll()
     {
       return gameEngine.Rides.OrderByDescending(x => x.Number);
     }
 
     [HttpGet("[action]/{id}")]
+    [AllowAnonymous]
     public IActionResult GetById(uint id)
     {
       var element = gameEngine.Rides.SingleOrDefault(x => x.Id == id);
