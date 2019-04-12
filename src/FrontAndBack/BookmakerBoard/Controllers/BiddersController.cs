@@ -31,7 +31,7 @@ namespace BookmakerBoard.Controllers
 
     [HttpGet("[action]")]
     [AllowAnonymous]
-    public IEnumerable<Bidder> GetTopThree()
+    public IEnumerable<Bidder> GetTop()
     {
       return gameEngine.Bidders
         .OrderByDescending(x => x.CurrentScore)

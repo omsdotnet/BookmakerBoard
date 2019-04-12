@@ -5,8 +5,8 @@ export const biddersGetAll = async () => {
     return result.json();
 };
 
-export const getTopTree = async () => {
-    const result = await fetch(`${address}api/Bidders/GetTopThree`);
+export const getTop = async () => {
+    const result = await fetch(`${address}api/Bidders/GetTop`);
     return result.json();
 }
 

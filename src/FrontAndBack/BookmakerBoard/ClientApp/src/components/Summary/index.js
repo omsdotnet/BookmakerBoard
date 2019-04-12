@@ -1,6 +1,6 @@
 ﻿import React, { Component, createRef, Fragment } from 'react';
 import { ridesGetAll } from '../../services/rides';
-import { getTopTree } from '../../services/bidders';
+import { getTop } from '../../services/bidders';
 import { teamsGetAll } from '../../services/teams';
 import {
   Grid, Sticky, Ref, List,
@@ -19,7 +19,7 @@ export class Home extends Component {
   };
 
   init = () => {
-    getTopTree().then((data) => {
+    getTop().then((data) => {
       this.setState({ topBidders: data });
     }).then(() => {
       Promise.all([ridesGetAll(), teamsGetAll()])
