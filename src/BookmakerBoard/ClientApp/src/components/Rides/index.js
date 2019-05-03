@@ -222,12 +222,12 @@ export class Rides extends Component {
         <Container>
           <List>
             <List.Item>
-              <List.Header>Заезды</List.Header>
-              <List.Description>Здесь регистрируем заезды и ставки</List.Description>
+              <List.Header>Ставки на победу</List.Header>
+              <List.Description>Здесь регистрируем ставки от участников на спикеров</List.Description>
             </List.Item>
           </List>
           <Divider />
-          <Button content="Создать заезд"
+          <Button content="Создать номинацию"
             onClick={this.handleRide} />
           <span style={{ marginRight: '25px' }} />
           <Button content="Создать ставку"
@@ -235,11 +235,11 @@ export class Rides extends Component {
             onClick={this.handleCreateRate}
             disabled={!isRide ? true : newRateId !== null} />
           <span style={{ marginRight: '25px' }} />
-          <Button content="Сохранить заезд"
+          <Button content="Сохранить номинацию"
             color='red'
             onClick={this.handleSaveRide}
             disabled={!isRide ? true : newRateId !== null} />
-          <Button content="Удалить"
+          <Button content="Удалить номинацию"
             color='red'
             onClick={this.handleDeleteRide}
             disabled={!isRide} />
@@ -247,7 +247,7 @@ export class Rides extends Component {
           <List horizontal>
             <List.Item>
               <List.Header>
-                Номер заезда:
+                Номинация:
               </List.Header>
               <List.Description>
                 <Dropdown fluid
@@ -255,7 +255,7 @@ export class Rides extends Component {
                   value={currentRide}
                   selection
                   scrolling
-                  placeholder="Номер заезда:"
+                  placeholder="Место:"
                   onChange={this.handleRideChange} />
               </List.Description>
             </List.Item>

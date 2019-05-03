@@ -58,8 +58,8 @@ export class Teams extends Component {
           <Grid.Column>
             <List>
               <List.Item>
-                <List.Header>Участники заездов</List.Header>
-                <List.Description>Команды, на которые делают ставки</List.Description>
+                <List.Header>Спикеры конференции</List.Header>
+                <List.Description>Те, на кого ставят</List.Description>
               </List.Item>
             </List>
             <Grid.Row>
@@ -72,7 +72,7 @@ export class Teams extends Component {
             <Table celled basic='very'>
               <Table.Header>
                 <Table.Row>
-                  <Table.HeaderCell width={14} content="Команда" />
+                  <Table.HeaderCell width={14} content="Номинант" />
                   <Table.HeaderCell singleLine width={2} />
                 </Table.Row>
               </Table.Header>
