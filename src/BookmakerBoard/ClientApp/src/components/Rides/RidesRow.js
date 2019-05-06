@@ -145,7 +145,7 @@ class RidesRow extends React.Component {
                         scrolling
                         direction='right'
                         options={teamsOptions}
-                        defaultValue={teamWin}
+                        value={teamWin}
                         onChange={this.handleTeamWin} />
                 </Table.Cell>
                 <Table.Cell>

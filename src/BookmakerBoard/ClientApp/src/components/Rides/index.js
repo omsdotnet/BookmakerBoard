@@ -51,7 +51,7 @@ export class Rides extends Component {
           teams,
           loading: false,
           ridesList: rides,
-          currentRide: ride && ride.id ? ride.id: -1,
+          currentRide: ride ? ride.id: -1,
           rides: {
             ...ride,
             rates: ride && ride.rates ? ride.rates.map(p => ({ ...p, isExist: true })) : []
@@ -149,6 +149,7 @@ export class Rides extends Component {
   handleRideChange = (_, { value }) => {
     const { ridesList } = this.state;
     const ride = ridesList.find(p => p.id === value);
+
     this.setState({
       currentRide: value,
       rides: {
@@ -217,6 +218,7 @@ export class Rides extends Component {
     const teamsOptions = teams.map((p, key) => ({ key, value: p.id, text: p.name }));
     const wins = rides.winnerTeams || [];
 
+    console.log(currentRide);
     return (
       <Segment loading={loading} basic>
         <Container>
