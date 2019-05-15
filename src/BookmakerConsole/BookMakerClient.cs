@@ -1,6 +1,7 @@
 ﻿using BookmakerConsole.Models;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,14 +14,16 @@ namespace BookmakerConsole
     private readonly string baseAddress;
     private static HttpClient client = new HttpClient();
 
-    public BookMakerClient(string baseAddress)
+    public BookMakerClient(string baseaddress)
     {
-      this.baseAddress = baseAddress;
+      baseAddress = baseaddress;
+
+      if (baseAddress.Last() != '/') baseAddress.Append('/');
     }
 
     public List<Bidder> GetAllBidders()
     {
-      var result = Task.Run(() => client.GetAsync(baseAddress + "/api/bidders/GetAll")).Result;
+      var result = Task.Run(() => client.GetAsync(baseAddress + "api/bidders/GetAll")).Result;
 
       if (result.IsSuccessStatusCode)
       {
@@ -34,7 +37,7 @@ namespace BookmakerConsole
 
     public List<Team> GetAllTeams()
     {
-      var result = Task.Run(() => client.GetAsync(baseAddress + "/api/teams/GetAll")).Result;
+      var result = Task.Run(() => client.GetAsync(baseAddress + "api/teams/GetAll")).Result;
 
       if (result.IsSuccessStatusCode)
       {
@@ -48,7 +51,7 @@ namespace BookmakerConsole
 
     public List<Ride> GetAllRides()
     {
-      var result = Task.Run(() => client.GetAsync(baseAddress + "/api/rides/GetAll")).Result;
+      var result = Task.Run(() => client.GetAsync(baseAddress + "api/rides/GetAll")).Result;
 
       if (result.IsSuccessStatusCode)
       {
@@ -62,7 +65,7 @@ namespace BookmakerConsole
 
     public Ride GetRide(uint id)
     {
-      var result = Task.Run(() => client.GetAsync(baseAddress + "/api/rides/GetById/" + id)).Result;
+      var result = Task.Run(() => client.GetAsync(baseAddress + "api/rides/GetById/" + id)).Result;
 
       if (result.IsSuccessStatusCode)
       {
@@ -80,7 +83,7 @@ namespace BookmakerConsole
 
       using (HttpContent httpContent = new StringContent(jsonString, Encoding.UTF8, "application/json"))
       {
-        var result = Task.Run(() => client.PutAsync(baseAddress + "/api/rides/" + item.Id, httpContent)).Result;
+        var result = Task.Run(() => client.PutAsync(baseAddress + "api/rides/" + item.Id, httpContent)).Result;
 
         result.EnsureSuccessStatusCode();
       }
@@ -89,7 +92,7 @@ namespace BookmakerConsole
 
     public void Authentificate(string login, string password)
     {
-      var addres = $"{baseAddress}/api/Authentication/Login?login={HttpUtility.UrlEncode(login)}&password={HttpUtility.UrlEncode(password)}";
+      var addres = $"{baseAddress}api/Authentication/Login?login={HttpUtility.UrlEncode(login)}&password={HttpUtility.UrlEncode(password)}";
 
       var result = Task.Run(() => client.PostAsync(addres, null)).Result;
 

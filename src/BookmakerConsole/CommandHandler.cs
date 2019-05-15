@@ -28,6 +28,12 @@ namespace BookmakerConsole
 
     internal string Process(string userText)
     {
+      if (userText == "update")
+      {
+        Initialize();
+        return "OK - updated";
+      }
+
       var textParts = userText
         .Split("-", StringSplitOptions.RemoveEmptyEntries)
         .ToList();
@@ -116,7 +122,7 @@ namespace BookmakerConsole
         return "ERROR - bidder not found";
       }
 
-      var speaker = speakers.SingleOrDefault(x => x.Name.ToLower() == userSpeaker.ToLower());
+      var speaker = speakers.SingleOrDefault(x => x.Name.ToLower().Replace('-', ' ') == userSpeaker.ToLower());
 
       if (speaker == null)
       {
@@ -170,12 +176,7 @@ namespace BookmakerConsole
         return "ERROR - bidder not found";
       }
 
-      if (bidder.CurrentScore < userRate)
-      {
-        return $"ERROR - rate: {bidder.CurrentScore} < {userRate}";
-      }
-
-      var speaker = speakers.SingleOrDefault(x => x.Name.ToLower() == userSpeaker.ToLower());
+      var speaker = speakers.SingleOrDefault(x => x.Name.ToLower().Replace('-', ' ') == userSpeaker.ToLower());
 
       if (speaker == null)
       {
@@ -203,10 +204,20 @@ namespace BookmakerConsole
       }
       else if (rate != null)
       {
+        if (bidder.CurrentScore + rate.RateValue < userRate)
+        {
+          return $"ERROR - rate: {bidder.CurrentScore} < {userRate}";
+        }
+
         rate.RateValue = userRate;
       }
       else
       {
+        if (bidder.CurrentScore < userRate)
+        {
+          return $"ERROR - rate: {bidder.CurrentScore} < {userRate}";
+        }
+
         var maxId = ride.Rates.Any() ? ride.Rates.Max(x => x.Id) : 0;
 
         var rateItem = new Rate()

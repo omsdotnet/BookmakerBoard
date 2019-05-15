@@ -52,7 +52,7 @@ namespace BookmakerBoard.Infrastructure.Identity
 
     public Task<string> GetPasswordHashAsync(IdentityUser user, CancellationToken cancellationToken)
     {
-      return Task.FromResult(@"sѯѿѿѿѡѻgoomsoѷѿѿѿѿso");
+      return Task.FromResult("sѯѿѿѿѡѻwrook\u007feѻѿѿѿѿc\u007fo");
     }
 
     public Task<string> GetUserIdAsync(IdentityUser user, CancellationToken cancellationToken)

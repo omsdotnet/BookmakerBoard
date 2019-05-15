@@ -9,3 +9,4 @@ Build/.sonar*
 *.PublishSettings
 /src/.vs
 /src/*.user
+/src/packages

@@ -64,7 +64,7 @@ namespace BookmakerBoard
           options.AccessDeniedPath = "/AccessDenied";
           options.Cookie.Name = "BookmakerBoardCookie";
           options.Cookie.HttpOnly = true;
-          options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
+          options.ExpireTimeSpan = TimeSpan.FromMinutes(600);
           options.LoginPath = "/Login";
           options.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
           options.SlidingExpiration = true;
@@ -80,7 +80,7 @@ namespace BookmakerBoard
 
       services.AddSwaggerGen(c =>
       {
-        c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
+        c.SwaggerDoc("v1", new Info { Title = "BookmakerBoard API", Version = "v1" });
       });
     }
 
