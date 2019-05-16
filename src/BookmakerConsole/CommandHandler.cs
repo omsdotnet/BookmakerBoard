@@ -9,17 +9,23 @@ namespace BookmakerConsole
   internal class CommandHandler
   {
     private IBookMakerClient client;
+    private readonly string login;
+    private readonly string password;
     private List<Bidder> bidders;
     private List<Team> speakers;
     private List<Ride> rides;
 
-    public CommandHandler(IBookMakerClient client)
+    public CommandHandler(IBookMakerClient client, string login, string password)
     {
       this.client = client;
+      this.login = login;
+      this.password = password;
     }
 
     internal void Initialize()
     {
+      client.Authentificate(login, password);
+
       bidders = client.GetAllBidders();
       speakers = client.GetAllTeams();
       rides = client.GetAllRides();

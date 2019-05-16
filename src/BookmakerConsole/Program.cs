@@ -14,9 +14,8 @@ namespace BookmakerConsole
       var password = Console.ReadLine();
 
       var client = new BookMakerClient(baseUrl);
-      client.Authentificate(login, password);
 
-      var handler = new CommandHandler(client);
+      var handler = new CommandHandler(client, login, password);
       handler.Initialize();
 
       var isExit = false;
