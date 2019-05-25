@@ -44,7 +44,11 @@ namespace BookmakerConsole
         .Split("-", StringSplitOptions.RemoveEmptyEntries)
         .ToList();
 
-      if (textParts.Count == 4)
+      if (textParts[0].Trim() == "set winner")
+      {
+        return SetRideWinner(textParts);
+      }
+      else if (textParts.Count == 4)
       {
         return UpdateRates(textParts);
       }
@@ -60,6 +64,44 @@ namespace BookmakerConsole
       {
         return "ERROR - wrong format: [bidder] - [speaker] - [rate] - [ride]";
       }
+    }
+
+    private string SetRideWinner(List<string> textParts)
+    {
+      var userRide = Convert.ToUInt32(textParts[1].Trim());
+      var userSpeaker = textParts[2].Trim();
+
+      var speaker = speakers.SingleOrDefault(x => x.Name.ToLower().Replace('-', ' ') == userSpeaker.ToLower());
+
+      if (speaker == null && userSpeaker != "0")
+      {
+        return "ERROR - speaker not found";
+      }
+
+      var rideId = rides.SingleOrDefault(x => x.Number == userRide)?.Id;
+
+      if (rideId == null)
+      {
+        return "ERROR - ride not found";
+      }
+
+      var ride = client.GetRide(rideId.Value);
+
+      if (userSpeaker == "0")
+      {
+        ride.WinnerTeams.Clear();
+      }
+      else
+      {
+        ride.WinnerTeams.Add(speaker.Id);
+      }
+
+      client.UpdateRide(ride);
+
+      bidders = client.GetAllBidders();
+      rides = client.GetAllRides();
+
+      return $"OK - winner set";
     }
 
     private string DeleteRatesForBidder(List<string> textParts)
