@@ -34,8 +34,7 @@ namespace BookmakerBoard.Controllers
     public IEnumerable<Bidder> GetTop()
     {
       return gameEngine.Bidders
-        .OrderByDescending(x => x.CurrentScore)
-        .Take(5);
+        .OrderByDescending(x => x.CurrentScore);
     }
 
 
