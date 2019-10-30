@@ -2,6 +2,110 @@
   "Bidders": [
   ],
   "Rides": [
+    {
+      "Id": 0,
+      "Number": 1,
+      "Rates": [
+      ],
+      "WinnerTeams": [
+      ]
+    },
+    {
+      "Id": 1,
+      "Number": 2,
+      "Rates": [
+      ],
+      "WinnerTeams": [
+      ]
+    },
+    {
+      "Id": 2,
+      "Number": 3,
+      "Rates": [
+      ],
+      "WinnerTeams": [
+      ]
+    },
+    {
+      "Id": 3,
+      "Number": 4,
+      "Rates": [
+      ],
+      "WinnerTeams": [
+      ]
+    },
+    {
+      "Id": 4,
+      "Number": 5,
+      "Rates": [
+      ],
+      "WinnerTeams": [
+      ]
+    },
+    {
+      "Id": 5,
+      "Number": 6,
+      "Rates": [
+      ],
+      "WinnerTeams": [
+      ]
+    },
+    {
+      "Id": 6,
+      "Number": 7,
+      "Rates": [
+      ],
+      "WinnerTeams": [
+      ]
+    },
+    {
+      "Id": 7,
+      "Number": 8,
+      "Rates": [
+      ],
+      "WinnerTeams": [
+      ]
+    },
+    {
+      "Id": 8,
+      "Number": 9,
+      "Rates": [
+      ],
+      "WinnerTeams": [
+      ]
+    },
+    {
+      "Id": 9,
+      "Number": 10,
+      "Rates": [
+      ],
+      "WinnerTeams": [
+      ]
+    },
+    {
+      "Id": 10,
+      "Number": 11,
+      "Rates": [
+      ],
+      "WinnerTeams": [
+      ]
+    },
+    {
+      "Id": 11,
+      "Number": 12,
+      "Rates": [
+      ],
+      "WinnerTeams": [
+      ]
+    },
+    {
+      "Id": 12,
+      "Number": 13,
+      "Rates": [
+      ],
+      "WinnerTeams": [
+      ]
+    }
   ],
   "Teams": [
     {
@@ -125,15 +229,15 @@
       "Name": "Андрей Дятлов"
     },
     {
-      "Id": 29,
+      "Id": 30,
       "Name": "Алексей Мерсон"
     },
     {
-      "Id": 29,
+      "Id": 31,
       "Name": "Егор Гришечко"
     },
     {
-      "Id": 29,
+      "Id": 32,
       "Name": "Dan Shechter"
     }
   ]
