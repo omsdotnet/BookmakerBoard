@@ -1,1 +1,140 @@
-{"Bidders":[{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},{"CurrentScore":0,"Id":1,"Name":"Пересада Олег","StartScore":1000},{"CurrentScore":700,"Id":2,"Name":"Стас","StartScore":1000},{"CurrentScore":700,"Id":3,"Name":"Игорь Крузе","StartScore":1000},{"CurrentScore":0,"Id":4,"Name":"Иван Киричук","StartScore":1000},{"CurrentScore":400,"Id":5,"Name":"Йорек Бирнисон","StartScore":1000},{"CurrentScore":1500,"Id":6,"Name":"Fail Cascade","StartScore":1000},{"CurrentScore":0,"Id":7,"Name":"Максим Сустретов","StartScore":1000},{"CurrentScore":0,"Id":8,"Name":"Ilmir Ibragimov","StartScore":1000},{"CurrentScore":0,"Id":9,"Name":"Виталий И","StartScore":1000},{"CurrentScore":5000,"Id":10,"Name":"Maxim Shoshin","StartScore":1000},{"CurrentScore":5000,"Id":11,"Name":"Andrei Kalikin","StartScore":1000},{"CurrentScore":0,"Id":12,"Name":"yobox","StartScore":1000},{"CurrentScore":2500,"Id":13,"Name":"Konstantin Gustov","StartScore":1000},{"CurrentScore":0,"Id":14,"Name":"Sergey","StartScore":1000}],"Rides":[{"Id":0,"Number":1,"Rates":[{"Bidder":{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},"Id":0,"RateValue":100,"Team":4},{"Bidder":{"CurrentScore":0,"Id":1,"Name":"Пересада Олег","StartScore":1000},"Id":0,"RateValue":300,"Team":4},{"Bidder":{"CurrentScore":0,"Id":8,"Name":"Ilmir Ibragimov","StartScore":1000},"Id":0,"RateValue":1000,"Team":13},{"Bidder":{"CurrentScore":0,"Id":9,"Name":"Виталий И","StartScore":1000},"Id":0,"RateValue":1000,"Team":13},{"Bidder":{"CurrentScore":5000,"Id":10,"Name":"Maxim Shoshin","StartScore":1000},"Id":0,"RateValue":1000,"Team":5},{"Bidder":{"CurrentScore":5000,"Id":11,"Name":"Andrei Kalikin","StartScore":1000},"Id":0,"RateValue":1000,"Team":5},{"Bidder":{"CurrentScore":0,"Id":12,"Name":"yobox","StartScore":1000},"Id":0,"RateValue":1000,"Team":13},{"Bidder":{"CurrentScore":2500,"Id":13,"Name":"Konstantin Gustov","StartScore":1000},"Id":0,"RateValue":500,"Team":5},{"Bidder":{"CurrentScore":0,"Id":14,"Name":"Sergey","StartScore":1000},"Id":0,"RateValue":1000,"Team":24}],"WinnerTeams":[5]},{"Id":1,"Number":2,"Rates":[{"Bidder":{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},"Id":0,"RateValue":100,"Team":1},{"Bidder":{"CurrentScore":0,"Id":4,"Name":"Иван Киричук","StartScore":1000},"Id":0,"RateValue":600,"Team":24},{"Bidder":{"CurrentScore":0,"Id":1,"Name":"Пересада Олег","StartScore":1000},"Id":0,"RateValue":200,"Team":16}],"WinnerTeams":[18]},{"Id":2,"Number":3,"Rates":[{"Bidder":{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},"Id":0,"RateValue":250,"Team":24}],"WinnerTeams":[21]},{"Id":3,"Number":4,"Rates":[{"Bidder":{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},"Id":0,"RateValue":10,"Team":9},{"Bidder":{"CurrentScore":700,"Id":2,"Name":"Стас","StartScore":1000},"Id":0,"RateValue":300,"Team":1},{"Bidder":{"CurrentScore":0,"Id":1,"Name":"Пересада Олег","StartScore":1000},"Id":0,"RateValue":200,"Team":19}],"WinnerTeams":[9]},{"Id":4,"Number":5,"Rates":[{"Bidder":{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},"Id":0,"RateValue":10,"Team":0}],"WinnerTeams":[4]},{"Id":5,"Number":6,"Rates":[{"Bidder":{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},"Id":0,"RateValue":10,"Team":16}],"WinnerTeams":[11]},{"Id":6,"Number":7,"Rates":[{"Bidder":{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},"Id":0,"RateValue":10,"Team":17}],"WinnerTeams":[13]},{"Id":7,"Number":8,"Rates":[{"Bidder":{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},"Id":0,"RateValue":10,"Team":14},{"Bidder":{"CurrentScore":0,"Id":1,"Name":"Пересада Олег","StartScore":1000},"Id":0,"RateValue":300,"Team":3}],"WinnerTeams":[8]},{"Id":8,"Number":9,"Rates":[{"Bidder":{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},"Id":0,"RateValue":10,"Team":18}],"WinnerTeams":[17]},{"Id":9,"Number":10,"Rates":[{"Bidder":{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},"Id":0,"RateValue":10,"Team":21}],"WinnerTeams":[6]},{"Id":10,"Number":11,"Rates":[{"Bidder":{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},"Id":2,"RateValue":20,"Team":24},{"Bidder":{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},"Id":1,"RateValue":20,"Team":1},{"Bidder":{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},"Id":0,"RateValue":20,"Team":4},{"Bidder":{"CurrentScore":0,"Id":7,"Name":"Максим Сустретов","StartScore":1000},"Id":2,"RateValue":1000,"Team":8},{"Bidder":{"CurrentScore":400,"Id":5,"Name":"Йорек Бирнисон","StartScore":1000},"Id":2,"RateValue":200,"Team":4}],"WinnerTeams":[5,18,21]},{"Id":11,"Number":12,"Rates":[{"Bidder":{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},"Id":4,"RateValue":20,"Team":0},{"Bidder":{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},"Id":3,"RateValue":20,"Team":24},{"Bidder":{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},"Id":2,"RateValue":20,"Team":1},{"Bidder":{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},"Id":1,"RateValue":20,"Team":9},{"Bidder":{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},"Id":0,"RateValue":20,"Team":4},{"Bidder":{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},"Id":4,"RateValue":20,"Team":15},{"Bidder":{"CurrentScore":700,"Id":3,"Name":"Игорь Крузе","StartScore":1000},"Id":4,"RateValue":300,"Team":13},{"Bidder":{"CurrentScore":0,"Id":4,"Name":"Иван Киричук","StartScore":1000},"Id":4,"RateValue":400,"Team":8},{"Bidder":{"CurrentScore":400,"Id":5,"Name":"Йорек Бирнисон","StartScore":1000},"Id":4,"RateValue":600,"Team":12},{"Bidder":{"CurrentScore":1500,"Id":6,"Name":"Fail Cascade","StartScore":1000},"Id":4,"RateValue":500,"Team":18},{"Bidder":{"CurrentScore":1500,"Id":6,"Name":"Fail Cascade","StartScore":1000},"Id":4,"RateValue":500,"Team":8},{"Bidder":{"CurrentScore":2500,"Id":13,"Name":"Konstantin Gustov","StartScore":1000},"Id":4,"RateValue":500,"Team":13}],"WinnerTeams":[5,18,21,9,4]},{"Id":12,"Number":13,"Rates":[{"Bidder":{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},"Id":9,"RateValue":20,"Team":17},{"Bidder":{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},"Id":7,"RateValue":20,"Team":24},{"Bidder":{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},"Id":6,"RateValue":20,"Team":21},{"Bidder":{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},"Id":5,"RateValue":20,"Team":16},{"Bidder":{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},"Id":4,"RateValue":20,"Team":14},{"Bidder":{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},"Id":3,"RateValue":20,"Team":9},{"Bidder":{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},"Id":2,"RateValue":20,"Team":0},{"Bidder":{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},"Id":1,"RateValue":20,"Team":4},{"Bidder":{"CurrentScore":450,"Id":0,"Name":"Пабло","StartScore":1000},"Id":0,"RateValue":20,"Team":1},{"Bidder":{"CurrentScore":400,"Id":5,"Name":"Йорек Бирнисон","StartScore":1000},"Id":9,"RateValue":200,"Team":4}],"WinnerTeams":[5,18,21,9,4,11,13,8,17,6]}],"Teams":[{"Id":0,"Name":"Jon Galloway"},{"Id":1,"Name":"Dino Esposito"},{"Id":2,"Name":"Christophe Nasarre"},{"Id":3,"Name":"Pavel Yosifovich"},{"Id":4,"Name":"Dylan Beattie"},{"Id":5,"Name":"Сергей Абдульманов"},{"Id":6,"Name":"Alex Thissen"},{"Id":7,"Name":"Вагиф Абилов"},{"Id":8,"Name":"Дмитрий Иванов"},{"Id":9,"Name":"Raffaele Rialdi"},{"Id":10,"Name":"Matthias Koch"},{"Id":11,"Name":"Edwin van Wijk"},{"Id":12,"Name":"Stan Drapkin"},{"Id":13,"Name":"Евгений Пешков"},{"Id":14,"Name":"Konrad Kokosa"},{"Id":15,"Name":"Alfonso Garcia-Caro"},{"Id":16,"Name":"Никита Цуканов"},{"Id":17,"Name":"Михаил Щербаков"},{"Id":18,"Name":"Роман Неволин"},{"Id":19,"Name":"Kevin Gosse"},{"Id":20,"Name":"Sean Farmar"},{"Id":21,"Name":"Дмитрий Нестерук"},{"Id":22,"Name":"Nico Vermeir"},{"Id":23,"Name":"Wesley Cabus"},{"Id":24,"Name":"Константин Густов"},{"Id":25,"Name":"Roberto Freato"},{"Id":26,"Name":"Александр Лаптев"},{"Id":27,"Name":"Михаил Шилков"},{"Id":28,"Name":"Андрей Карпов"},{"Id":29,"Name":"Андрей Дятлов"}]}
+{
+  "Bidders": [
+  ],
+  "Rides": [
+  ],
+  "Teams": [
+    {
+      "Id": 0,
+      "Name": "Jon Galloway"
+    },
+    {
+      "Id": 1,
+      "Name": "Егор Богатов"
+    },
+    {
+      "Id": 2,
+      "Name": "Federico Lois"
+    },
+    {
+      "Id": 3,
+      "Name": "Scott Wlaschin"
+    },
+    {
+      "Id": 4,
+      "Name": "Christophe Nasarre"
+    },
+    {
+      "Id": 5,
+      "Name": "Pavel Yosifovich"
+    },
+    {
+      "Id": 6,
+      "Name": "Joreg"
+    },
+    {
+      "Id": 7,
+      "Name": "Максим Аршинов"
+    },
+    {
+      "Id": 8,
+      "Name": "Stephen Cleary"
+    },
+    {
+      "Id": 9,
+      "Name": "Кирилл Скрыган"
+    },
+    {
+      "Id": 10,
+      "Name": "Raffaele Rialdi"
+    },
+    {
+      "Id": 11,
+      "Name": "Jeff Prosise"
+    },
+    {
+      "Id": 12,
+      "Name": "Евгений Пешков"
+    },
+    {
+      "Id": 13,
+      "Name": "Яков Повар"
+    },
+    {
+      "Id": 14,
+      "Name": "Александр Панчин"
+    },
+    {
+      "Id": 15,
+      "Name": "Alfonso Garcia-Caro"
+    },
+    {
+      "Id": 16,
+      "Name": "Elias Holzer"
+    },
+    {
+      "Id": 17,
+      "Name": "Дмитрий Сошников"
+    },
+    {
+      "Id": 18,
+      "Name": "Роман Неволин"
+    },
+    {
+      "Id": 19,
+      "Name": "Michael Staib"
+    },
+    {
+      "Id": 20,
+      "Name": "Константин Житник"
+    },
+    {
+      "Id": 21,
+      "Name": "Владимир Панченко"
+    },
+    {
+      "Id": 22,
+      "Name": "Анатолий Жмур"
+    },
+    {
+      "Id": 23,
+      "Name": "Николай Молчанов"
+    },
+    {
+      "Id": 24,
+      "Name": "Kevin Gosse"
+    },
+    {
+      "Id": 25,
+      "Name": "Marco De Sanctis"
+    },
+    {
+      "Id": 26,
+      "Name": "tukasz Pyrzyk"
+    },
+    {
+      "Id": 27,
+      "Name": "Роман Просин"
+    },
+    {
+      "Id": 28,
+      "Name": "Eran Stiller"
+    },
+    {
+      "Id": 29,
+      "Name": "Андрей Дятлов"
+    },
+    {
+      "Id": 29,
+      "Name": "Алексей Мерсон"
+    },
+    {
+      "Id": 29,
+      "Name": "Егор Гришечко"
+    },
+    {
+      "Id": 29,
+      "Name": "Dan Shechter"
+    }
+  ]
+}
