@@ -10,3 +10,4 @@ Build/.sonar*
 /src/.vs
 /src/*.user
 /src/packages
+/promo/Matherials
