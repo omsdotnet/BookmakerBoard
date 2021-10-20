@@ -1,1 +1,803 @@
-{"Bidders":[{"CurrentScore":0,"Id":1,"Name":"PKulbida","StartScore":1000},{"CurrentScore":105,"Id":3,"Name":"dKariakin","StartScore":1000},{"CurrentScore":0,"Id":4,"Name":"MrVitaly","StartScore":1000},{"CurrentScore":1000,"Id":5,"Name":"aleximos","StartScore":1000},{"CurrentScore":0,"Id":6,"Name":"degteroff","StartScore":1000},{"CurrentScore":0,"Id":7,"Name":"ilabutin","StartScore":1000},{"CurrentScore":0,"Id":8,"Name":"kruzzze","StartScore":1000},{"CurrentScore":0,"Id":9,"Name":"AndreiKalikin","StartScore":1000},{"CurrentScore":0,"Id":10,"Name":" Михаил","StartScore":1000},{"CurrentScore":0,"Id":11,"Name":"Peresada_Oleg","StartScore":1000},{"CurrentScore":0,"Id":12,"Name":"Danilov Nikita","StartScore":1000},{"CurrentScore":500,"Id":13,"Name":"KinderGir","StartScore":1000},{"CurrentScore":0,"Id":14,"Name":"AuthorProxy","StartScore":1000},{"CurrentScore":0,"Id":15,"Name":"marshinov","StartScore":1000},{"CurrentScore":0,"Id":16,"Name":"waynesayonara","StartScore":1000},{"CurrentScore":0,"Id":17,"Name":"iibragimov","StartScore":1000},{"CurrentScore":0,"Id":18,"Name":"Digiman89","StartScore":1000},{"CurrentScore":0,"Id":19,"Name":"DedSec256","StartScore":1000},{"CurrentScore":0,"Id":20,"Name":"anton2schelokov","StartScore":1000},{"CurrentScore":0,"Id":21,"Name":"Dr_klo","StartScore":1000},{"CurrentScore":0,"Id":22,"Name":"Crustquake","StartScore":1000},{"CurrentScore":0,"Id":23,"Name":" Alex","StartScore":1000}],"Rides":[{"Id":0,"Number":1,"Rates":[{"Bidder":{"CurrentScore":105,"Id":3,"Name":"dKariakin","StartScore":1000},"Id":2,"RateValue":1,"Team":32},{"Bidder":{"CurrentScore":0,"Id":4,"Name":"MrVitaly","StartScore":1000},"Id":3,"RateValue":1000,"Team":12},{"Bidder":{"CurrentScore":0,"Id":16,"Name":"waynesayonara","StartScore":1000},"Id":4,"RateValue":1000,"Team":14},{"Bidder":{"CurrentScore":0,"Id":17,"Name":"iibragimov","StartScore":1000},"Id":5,"RateValue":1000,"Team":9},{"Bidder":{"CurrentScore":0,"Id":19,"Name":"DedSec256","StartScore":1000},"Id":6,"RateValue":1000,"Team":1},{"Bidder":{"CurrentScore":0,"Id":22,"Name":"Crustquake","StartScore":1000},"Id":7,"RateValue":1000,"Team":0}],"WinnerTeams":[]},{"Id":1,"Number":2,"Rates":[{"Bidder":{"CurrentScore":105,"Id":3,"Name":"dKariakin","StartScore":1000},"Id":1,"RateValue":2,"Team":29},{"Bidder":{"CurrentScore":0,"Id":10,"Name":" Михаил","StartScore":1000},"Id":2,"RateValue":1000,"Team":12}],"WinnerTeams":[]},{"Id":2,"Number":3,"Rates":[{"Bidder":{"CurrentScore":105,"Id":3,"Name":"dKariakin","StartScore":1000},"Id":1,"RateValue":10,"Team":30},{"Bidder":{"CurrentScore":105,"Id":3,"Name":"dKariakin","StartScore":1000},"Id":2,"RateValue":10,"Team":13},{"Bidder":{"CurrentScore":0,"Id":9,"Name":"AndreiKalikin","StartScore":1000},"Id":3,"RateValue":1000,"Team":12}],"WinnerTeams":[]},{"Id":3,"Number":4,"Rates":[{"Bidder":{"CurrentScore":105,"Id":3,"Name":"dKariakin","StartScore":1000},"Id":1,"RateValue":3,"Team":23},{"Bidder":{"CurrentScore":105,"Id":3,"Name":"dKariakin","StartScore":1000},"Id":2,"RateValue":3,"Team":12},{"Bidder":{"CurrentScore":105,"Id":3,"Name":"dKariakin","StartScore":1000},"Id":3,"RateValue":3,"Team":19},{"Bidder":{"CurrentScore":105,"Id":3,"Name":"dKariakin","StartScore":1000},"Id":4,"RateValue":10,"Team":3}],"WinnerTeams":[]},{"Id":4,"Number":5,"Rates":[{"Bidder":{"CurrentScore":105,"Id":3,"Name":"dKariakin","StartScore":1000},"Id":1,"RateValue":4,"Team":17},{"Bidder":{"CurrentScore":105,"Id":3,"Name":"dKariakin","StartScore":1000},"Id":2,"RateValue":5,"Team":0},{"Bidder":{"CurrentScore":105,"Id":3,"Name":"dKariakin","StartScore":1000},"Id":3,"RateValue":486,"Team":2}],"WinnerTeams":[]},{"Id":5,"Number":6,"Rates":[{"Bidder":{"CurrentScore":105,"Id":3,"Name":"dKariakin","StartScore":1000},"Id":1,"RateValue":110,"Team":10}],"WinnerTeams":[]},{"Id":6,"Number":7,"Rates":[],"WinnerTeams":[]},{"Id":7,"Number":8,"Rates":[{"Bidder":{"CurrentScore":0,"Id":1,"Name":"PKulbida","StartScore":1000},"Id":1,"RateValue":100,"Team":27}],"WinnerTeams":[]},{"Id":8,"Number":9,"Rates":[{"Bidder":{"CurrentScore":105,"Id":3,"Name":"dKariakin","StartScore":1000},"Id":2,"RateValue":9,"Team":25},{"Bidder":{"CurrentScore":105,"Id":3,"Name":"dKariakin","StartScore":1000},"Id":3,"RateValue":9,"Team":21}],"WinnerTeams":[]},{"Id":9,"Number":10,"Rates":[{"Bidder":{"CurrentScore":105,"Id":3,"Name":"dKariakin","StartScore":1000},"Id":1,"RateValue":10,"Team":24},{"Bidder":{"CurrentScore":105,"Id":3,"Name":"dKariakin","StartScore":1000},"Id":2,"RateValue":10,"Team":20},{"Bidder":{"CurrentScore":105,"Id":3,"Name":"dKariakin","StartScore":1000},"Id":3,"RateValue":10,"Team":7},{"Bidder":{"CurrentScore":105,"Id":3,"Name":"dKariakin","StartScore":1000},"Id":4,"RateValue":10,"Team":11}],"WinnerTeams":[]},{"Id":10,"Number":11,"Rates":[{"Bidder":{"CurrentScore":105,"Id":3,"Name":"dKariakin","StartScore":1000},"Id":4,"RateValue":1,"Team":31},{"Bidder":{"CurrentScore":105,"Id":3,"Name":"dKariakin","StartScore":1000},"Id":5,"RateValue":12,"Team":16},{"Bidder":{"CurrentScore":105,"Id":3,"Name":"dKariakin","StartScore":1000},"Id":6,"RateValue":13,"Team":14},{"Bidder":{"CurrentScore":0,"Id":7,"Name":"ilabutin","StartScore":1000},"Id":7,"RateValue":500,"Team":14},{"Bidder":{"CurrentScore":0,"Id":1,"Name":"PKulbida","StartScore":1000},"Id":8,"RateValue":100,"Team":1},{"Bidder":{"CurrentScore":0,"Id":1,"Name":"PKulbida","StartScore":1000},"Id":9,"RateValue":100,"Team":0},{"Bidder":{"CurrentScore":0,"Id":12,"Name":"Danilov Nikita","StartScore":1000},"Id":12,"RateValue":250,"Team":3},{"Bidder":{"CurrentScore":0,"Id":12,"Name":"Danilov Nikita","StartScore":1000},"Id":13,"RateValue":250,"Team":17},{"Bidder":{"CurrentScore":500,"Id":13,"Name":"KinderGir","StartScore":1000},"Id":14,"RateValue":500,"Team":9},{"Bidder":{"CurrentScore":0,"Id":14,"Name":"AuthorProxy","StartScore":1000},"Id":15,"RateValue":333,"Team":17},{"Bidder":{"CurrentScore":0,"Id":15,"Name":"marshinov","StartScore":1000},"Id":16,"RateValue":1000,"Team":7},{"Bidder":{"CurrentScore":0,"Id":18,"Name":"Digiman89","StartScore":1000},"Id":17,"RateValue":500,"Team":9},{"Bidder":{"CurrentScore":0,"Id":11,"Name":"Peresada_Oleg","StartScore":1000},"Id":18,"RateValue":500,"Team":1},{"Bidder":{"CurrentScore":0,"Id":20,"Name":"anton2schelokov","StartScore":1000},"Id":19,"RateValue":500,"Team":17},{"Bidder":{"CurrentScore":0,"Id":20,"Name":"anton2schelokov","StartScore":1000},"Id":20,"RateValue":500,"Team":12},{"Bidder":{"CurrentScore":0,"Id":21,"Name":"Dr_klo","StartScore":1000},"Id":21,"RateValue":200,"Team":8},{"Bidder":{"CurrentScore":0,"Id":21,"Name":"Dr_klo","StartScore":1000},"Id":22,"RateValue":100,"Team":13}],"WinnerTeams":[]},{"Id":11,"Number":12,"Rates":[{"Bidder":{"CurrentScore":105,"Id":3,"Name":"dKariakin","StartScore":1000},"Id":4,"RateValue":10,"Team":22},{"Bidder":{"CurrentScore":105,"Id":3,"Name":"dKariakin","StartScore":1000},"Id":5,"RateValue":10,"Team":8},{"Bidder":{"CurrentScore":105,"Id":3,"Name":"dKariakin","StartScore":1000},"Id":6,"RateValue":14,"Team":1},{"Bidder":{"CurrentScore":0,"Id":6,"Name":"degteroff","StartScore":1000},"Id":7,"RateValue":1000,"Team":27},{"Bidder":{"CurrentScore":0,"Id":1,"Name":"PKulbida","StartScore":1000},"Id":8,"RateValue":100,"Team":27},{"Bidder":{"CurrentScore":0,"Id":7,"Name":"ilabutin","StartScore":1000},"Id":9,"RateValue":500,"Team":32},{"Bidder":{"CurrentScore":0,"Id":1,"Name":"PKulbida","StartScore":1000},"Id":10,"RateValue":100,"Team":12},{"Bidder":{"CurrentScore":0,"Id":1,"Name":"PKulbida","StartScore":1000},"Id":11,"RateValue":100,"Team":7},{"Bidder":{"CurrentScore":0,"Id":8,"Name":"kruzzze","StartScore":1000},"Id":12,"RateValue":500,"Team":27},{"Bidder":{"CurrentScore":0,"Id":8,"Name":"kruzzze","StartScore":1000},"Id":13,"RateValue":300,"Team":30},{"Bidder":{"CurrentScore":0,"Id":12,"Name":"Danilov Nikita","StartScore":1000},"Id":14,"RateValue":250,"Team":7},{"Bidder":{"CurrentScore":0,"Id":12,"Name":"Danilov Nikita","StartScore":1000},"Id":15,"RateValue":250,"Team":12},{"Bidder":{"CurrentScore":0,"Id":14,"Name":"AuthorProxy","StartScore":1000},"Id":16,"RateValue":333,"Team":14},{"Bidder":{"CurrentScore":0,"Id":18,"Name":"Digiman89","StartScore":1000},"Id":17,"RateValue":500,"Team":7},{"Bidder":{"CurrentScore":0,"Id":11,"Name":"Peresada_Oleg","StartScore":1000},"Id":18,"RateValue":500,"Team":9},{"Bidder":{"CurrentScore":0,"Id":21,"Name":"Dr_klo","StartScore":1000},"Id":19,"RateValue":100,"Team":0},{"Bidder":{"CurrentScore":0,"Id":21,"Name":"Dr_klo","StartScore":1000},"Id":20,"RateValue":100,"Team":30},{"Bidder":{"CurrentScore":0,"Id":21,"Name":"Dr_klo","StartScore":1000},"Id":21,"RateValue":100,"Team":19},{"Bidder":{"CurrentScore":0,"Id":23,"Name":" Alex","StartScore":1000},"Id":22,"RateValue":300,"Team":3},{"Bidder":{"CurrentScore":0,"Id":23,"Name":" Alex","StartScore":1000},"Id":23,"RateValue":400,"Team":1},{"Bidder":{"CurrentScore":0,"Id":23,"Name":" Alex","StartScore":1000},"Id":24,"RateValue":300,"Team":13}],"WinnerTeams":[]},{"Id":12,"Number":13,"Rates":[{"Bidder":{"CurrentScore":105,"Id":3,"Name":"dKariakin","StartScore":1000},"Id":2,"RateValue":10,"Team":28},{"Bidder":{"CurrentScore":105,"Id":3,"Name":"dKariakin","StartScore":1000},"Id":3,"RateValue":10,"Team":6},{"Bidder":{"CurrentScore":105,"Id":3,"Name":"dKariakin","StartScore":1000},"Id":4,"RateValue":110,"Team":5},{"Bidder":{"CurrentScore":0,"Id":1,"Name":"PKulbida","StartScore":1000},"Id":5,"RateValue":300,"Team":27},{"Bidder":{"CurrentScore":0,"Id":8,"Name":"kruzzze","StartScore":1000},"Id":7,"RateValue":200,"Team":14},{"Bidder":{"CurrentScore":0,"Id":14,"Name":"AuthorProxy","StartScore":1000},"Id":8,"RateValue":334,"Team":1},{"Bidder":{"CurrentScore":0,"Id":1,"Name":"PKulbida","StartScore":1000},"Id":9,"RateValue":100,"Team":17},{"Bidder":{"CurrentScore":0,"Id":21,"Name":"Dr_klo","StartScore":1000},"Id":10,"RateValue":100,"Team":7},{"Bidder":{"CurrentScore":0,"Id":21,"Name":"Dr_klo","StartScore":1000},"Id":11,"RateValue":100,"Team":29},{"Bidder":{"CurrentScore":0,"Id":21,"Name":"Dr_klo","StartScore":1000},"Id":12,"RateValue":100,"Team":28},{"Bidder":{"CurrentScore":0,"Id":21,"Name":"Dr_klo","StartScore":1000},"Id":13,"RateValue":100,"Team":6}],"WinnerTeams":[]}],"Teams":[{"Id":0,"Name":"Jon Galloway"},{"Id":1,"Name":"Егор Богатов"},{"Id":2,"Name":"Federico Lois"},{"Id":3,"Name":"Scott Wlaschin"},{"Id":4,"Name":"Christophe Nasarre"},{"Id":5,"Name":"Pavel Yosifovich"},{"Id":6,"Name":"Joreg"},{"Id":7,"Name":"Максим Аршинов"},{"Id":8,"Name":"Stephen Cleary"},{"Id":9,"Name":"Кирилл Скрыган"},{"Id":10,"Name":"Raffaele Rialdi"},{"Id":11,"Name":"Jeff Prosise"},{"Id":12,"Name":"Евгений Пешков"},{"Id":13,"Name":"Яков Повар"},{"Id":14,"Name":"Александр Панчин"},{"Id":16,"Name":"Elias Holzer"},{"Id":17,"Name":"Дмитрий Сошников"},{"Id":19,"Name":"Michael Staib"},{"Id":20,"Name":"Константин Житник"},{"Id":21,"Name":"Владимир Панченко"},{"Id":22,"Name":"Анатолий Жмур"},{"Id":23,"Name":"Николай Молчанов"},{"Id":24,"Name":"Kevin Gosse"},{"Id":25,"Name":"Marco De Sanctis"},{"Id":26,"Name":"Lukasz Pyrzyk"},{"Id":27,"Name":"Роман Просин"},{"Id":28,"Name":"Eran Stiller"},{"Id":29,"Name":"Андрей Дятлов"},{"Id":30,"Name":"Алексей Мерсон"},{"Id":31,"Name":"Егор Гришечко"},{"Id":32,"Name":"Dan Shechter"}]}
+{
+  "Bidders": [
+    {
+      "CurrentScore": 0,
+      "Id": 1,
+      "Name": "PKulbida",
+      "StartScore": 1000
+    },
+    {
+      "CurrentScore": 5000,
+      "Id": 2,
+      "Name": "Peresada_Oleg",
+      "StartScore": 1000
+    },
+    {
+      "CurrentScore": 300,
+      "Id": 3,
+      "Name": "timonyatim",
+      "StartScore": 1000
+    },
+    {
+      "CurrentScore": 900,
+      "Id": 4,
+      "Name": " Sergey",
+      "StartScore": 1000
+    },
+    {
+      "CurrentScore": 5000,
+      "Id": 5,
+      "Name": "lifefreedom11",
+      "StartScore": 1000
+    },
+    {
+      "CurrentScore": 500,
+      "Id": 6,
+      "Name": "atlantis3012",
+      "StartScore": 1000
+    },
+    {
+      "CurrentScore": 2200,
+      "Id": 8,
+      "Name": "Digiman89",
+      "StartScore": 1000
+    },
+    {
+      "CurrentScore": 3000,
+      "Id": 9,
+      "Name": "eugene01",
+      "StartScore": 1000
+    },
+    {
+      "CurrentScore": 5000,
+      "Id": 10,
+      "Name": "maxshoshin",
+      "StartScore": 1000
+    },
+    {
+      "CurrentScore": 4000,
+      "Id": 11,
+      "Name": "ishatalkin",
+      "StartScore": 1000
+    },
+    {
+      "CurrentScore": 0,
+      "Id": 12,
+      "Name": "unchase",
+      "StartScore": 1000
+    },
+    {
+      "CurrentScore": 5000,
+      "Id": 13,
+      "Name": "waynesayonara",
+      "StartScore": 1000
+    },
+    {
+      "CurrentScore": 0,
+      "Id": 14,
+      "Name": "MrVitaly",
+      "StartScore": 1000
+    },
+    {
+      "CurrentScore": 5000,
+      "Id": 15,
+      "Name": "lirikill",
+      "StartScore": 1000
+    },
+    {
+      "CurrentScore": 1336,
+      "Id": 16,
+      "Name": "oneyearlater",
+      "StartScore": 1000
+    },
+    {
+      "CurrentScore": 1200,
+      "Id": 17,
+      "Name": "sergeyo1",
+      "StartScore": 1000
+    },
+    {
+      "CurrentScore": 5000,
+      "Id": 18,
+      "Name": "pugacha",
+      "StartScore": 1000
+    }
+  ],
+  "Rides": [
+    {
+      "Id": 0,
+      "Number": 1,
+      "Rates": [
+        {
+          "Bidder": {
+            "CurrentScore": 5000,
+            "Id": 5,
+            "Name": "lifefreedom11",
+            "StartScore": 1000
+          },
+          "Id": 1,
+          "RateValue": 1000,
+          "Team": 0
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 500,
+            "Id": 6,
+            "Name": "atlantis3012",
+            "StartScore": 1000
+          },
+          "Id": 2,
+          "RateValue": 100,
+          "Team": 0
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 500,
+            "Id": 6,
+            "Name": "atlantis3012",
+            "StartScore": 1000
+          },
+          "Id": 3,
+          "RateValue": 100,
+          "Team": 12
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 5000,
+            "Id": 10,
+            "Name": "maxshoshin",
+            "StartScore": 1000
+          },
+          "Id": 4,
+          "RateValue": 1000,
+          "Team": 0
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 5000,
+            "Id": 13,
+            "Name": "waynesayonara",
+            "StartScore": 1000
+          },
+          "Id": 5,
+          "RateValue": 1000,
+          "Team": 0
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 5000,
+            "Id": 15,
+            "Name": "lirikill",
+            "StartScore": 1000
+          },
+          "Id": 6,
+          "RateValue": 1000,
+          "Team": 0
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 5000,
+            "Id": 2,
+            "Name": "Peresada_Oleg",
+            "StartScore": 1000
+          },
+          "Id": 7,
+          "RateValue": 1000,
+          "Team": 0
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 1200,
+            "Id": 17,
+            "Name": "sergeyo1",
+            "StartScore": 1000
+          },
+          "Id": 8,
+          "RateValue": 300,
+          "Team": 20
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 5000,
+            "Id": 18,
+            "Name": "pugacha",
+            "StartScore": 1000
+          },
+          "Id": 9,
+          "RateValue": 1000,
+          "Team": 0
+        }
+      ],
+      "WinnerTeams": [
+        0
+      ]
+    },
+    {
+      "Id": 1,
+      "Number": 2,
+      "Rates": [
+        {
+          "Bidder": {
+            "CurrentScore": 500,
+            "Id": 6,
+            "Name": "atlantis3012",
+            "StartScore": 1000
+          },
+          "Id": 1,
+          "RateValue": 200,
+          "Team": 7
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 0,
+            "Id": 14,
+            "Name": "MrVitaly",
+            "StartScore": 1000
+          },
+          "Id": 2,
+          "RateValue": 1000,
+          "Team": 12
+        }
+      ],
+      "WinnerTeams": [
+        10
+      ]
+    },
+    {
+      "Id": 2,
+      "Number": 3,
+      "Rates": [
+        {
+          "Bidder": {
+            "CurrentScore": 500,
+            "Id": 6,
+            "Name": "atlantis3012",
+            "StartScore": 1000
+          },
+          "Id": 1,
+          "RateValue": 150,
+          "Team": 20
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 500,
+            "Id": 6,
+            "Name": "atlantis3012",
+            "StartScore": 1000
+          },
+          "Id": 2,
+          "RateValue": 75,
+          "Team": 23
+        }
+      ],
+      "WinnerTeams": [
+        12,
+        13
+      ]
+    },
+    {
+      "Id": 3,
+      "Number": 4,
+      "Rates": [
+        {
+          "Bidder": {
+            "CurrentScore": 500,
+            "Id": 6,
+            "Name": "atlantis3012",
+            "StartScore": 1000
+          },
+          "Id": 1,
+          "RateValue": 150,
+          "Team": 27
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 500,
+            "Id": 6,
+            "Name": "atlantis3012",
+            "StartScore": 1000
+          },
+          "Id": 2,
+          "RateValue": 75,
+          "Team": 26
+        }
+      ],
+      "WinnerTeams": [
+        29
+      ]
+    },
+    {
+      "Id": 4,
+      "Number": 5,
+      "Rates": [
+      ],
+      "WinnerTeams": [
+        27
+      ]
+    },
+    {
+      "Id": 5,
+      "Number": 6,
+      "Rates": [
+      ],
+      "WinnerTeams": [
+        6
+      ]
+    },
+    {
+      "Id": 6,
+      "Number": 7,
+      "Rates": [
+        {
+          "Bidder": {
+            "CurrentScore": 500,
+            "Id": 6,
+            "Name": "atlantis3012",
+            "StartScore": 1000
+          },
+          "Id": 1,
+          "RateValue": 50,
+          "Team": 15
+        }
+      ],
+      "WinnerTeams": [
+        34
+      ]
+    },
+    {
+      "Id": 7,
+      "Number": 8,
+      "Rates": [
+        {
+          "Bidder": {
+            "CurrentScore": 500,
+            "Id": 6,
+            "Name": "atlantis3012",
+            "StartScore": 1000
+          },
+          "Id": 1,
+          "RateValue": 50,
+          "Team": 11
+        }
+      ],
+      "WinnerTeams": [
+        4
+      ]
+    },
+    {
+      "Id": 8,
+      "Number": 9,
+      "Rates": [
+        {
+          "Bidder": {
+            "CurrentScore": 500,
+            "Id": 6,
+            "Name": "atlantis3012",
+            "StartScore": 1000
+          },
+          "Id": 1,
+          "RateValue": 50,
+          "Team": 1
+        }
+      ],
+      "WinnerTeams": [
+        7
+      ]
+    },
+    {
+      "Id": 9,
+      "Number": 10,
+      "Rates": [
+      ],
+      "WinnerTeams": [
+        33
+      ]
+    },
+    {
+      "Id": 10,
+      "Number": 11,
+      "Rates": [
+        {
+          "Bidder": {
+            "CurrentScore": 2200,
+            "Id": 8,
+            "Name": "Digiman89",
+            "StartScore": 1000
+          },
+          "Id": 2,
+          "RateValue": 400,
+          "Team": 0
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 300,
+            "Id": 3,
+            "Name": "timonyatim",
+            "StartScore": 1000
+          },
+          "Id": 3,
+          "RateValue": 500,
+          "Team": 23
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 4000,
+            "Id": 11,
+            "Name": "ishatalkin",
+            "StartScore": 1000
+          },
+          "Id": 5,
+          "RateValue": 1000,
+          "Team": 12
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 1336,
+            "Id": 16,
+            "Name": "oneyearlater",
+            "StartScore": 1000
+          },
+          "Id": 6,
+          "RateValue": 334,
+          "Team": 0
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 1336,
+            "Id": 16,
+            "Name": "oneyearlater",
+            "StartScore": 1000
+          },
+          "Id": 7,
+          "RateValue": 333,
+          "Team": 23
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 1336,
+            "Id": 16,
+            "Name": "oneyearlater",
+            "StartScore": 1000
+          },
+          "Id": 8,
+          "RateValue": 333,
+          "Team": 33
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 1200,
+            "Id": 17,
+            "Name": "sergeyo1",
+            "StartScore": 1000
+          },
+          "Id": 9,
+          "RateValue": 300,
+          "Team": 0
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 1200,
+            "Id": 17,
+            "Name": "sergeyo1",
+            "StartScore": 1000
+          },
+          "Id": 10,
+          "RateValue": 400,
+          "Team": 7
+        }
+      ],
+      "WinnerTeams": [
+        0,
+        10,
+        12,
+        13
+      ]
+    },
+    {
+      "Id": 11,
+      "Number": 12,
+      "Rates": [
+        {
+          "Bidder": {
+            "CurrentScore": 0,
+            "Id": 1,
+            "Name": "PKulbida",
+            "StartScore": 1000
+          },
+          "Id": 1,
+          "RateValue": 500,
+          "Team": 32
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 900,
+            "Id": 4,
+            "Name": " Sergey",
+            "StartScore": 1000
+          },
+          "Id": 2,
+          "RateValue": 200,
+          "Team": 7
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 900,
+            "Id": 4,
+            "Name": " Sergey",
+            "StartScore": 1000
+          },
+          "Id": 3,
+          "RateValue": 300,
+          "Team": 0
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 900,
+            "Id": 4,
+            "Name": " Sergey",
+            "StartScore": 1000
+          },
+          "Id": 4,
+          "RateValue": 300,
+          "Team": 33
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 2200,
+            "Id": 8,
+            "Name": "Digiman89",
+            "StartScore": 1000
+          },
+          "Id": 5,
+          "RateValue": 400,
+          "Team": 33
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 2200,
+            "Id": 8,
+            "Name": "Digiman89",
+            "StartScore": 1000
+          },
+          "Id": 6,
+          "RateValue": 200,
+          "Team": 29
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 3000,
+            "Id": 9,
+            "Name": "eugene01",
+            "StartScore": 1000
+          },
+          "Id": 7,
+          "RateValue": 1000,
+          "Team": 0
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 0,
+            "Id": 12,
+            "Name": "unchase",
+            "StartScore": 1000
+          },
+          "Id": 8,
+          "RateValue": 500,
+          "Team": 33
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 0,
+            "Id": 1,
+            "Name": "PKulbida",
+            "StartScore": 1000
+          },
+          "Id": 9,
+          "RateValue": 500,
+          "Team": 23
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 300,
+            "Id": 3,
+            "Name": "timonyatim",
+            "StartScore": 1000
+          },
+          "Id": 10,
+          "RateValue": 200,
+          "Team": 20
+        }
+      ],
+      "WinnerTeams": [
+        0,
+        10,
+        12,
+        13,
+        29,
+        27
+      ]
+    },
+    {
+      "Id": 12,
+      "Number": 13,
+      "Rates": [
+        {
+          "Bidder": {
+            "CurrentScore": 900,
+            "Id": 4,
+            "Name": " Sergey",
+            "StartScore": 1000
+          },
+          "Id": 1,
+          "RateValue": 200,
+          "Team": 17
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 0,
+            "Id": 12,
+            "Name": "unchase",
+            "StartScore": 1000
+          },
+          "Id": 2,
+          "RateValue": 300,
+          "Team": 28
+        },
+        {
+          "Bidder": {
+            "CurrentScore": 0,
+            "Id": 12,
+            "Name": "unchase",
+            "StartScore": 1000
+          },
+          "Id": 3,
+          "RateValue": 200,
+          "Team": 30
+        }
+      ],
+      "WinnerTeams": [
+        0,
+        10,
+        12,
+        13,
+        29,
+        27,
+        6,
+        34,
+        4,
+        7,
+        33
+      ]
+    }
+  ],
+  "Teams": [
+    {
+      "Id": 0,
+      "Name": "Stephen Toub"
+    },
+    {
+      "Id": 1,
+      "Name": "Карлен Симонян"
+    },
+    {
+      "Id": 2,
+      "Name": "Roland Guijt"
+    },
+    {
+      "Id": 3,
+      "Name": "Johnny Hooyberghs"
+    },
+    {
+      "Id": 4,
+      "Name": "Станислав Сидристый"
+    },
+    {
+      "Id": 5,
+      "Name": "Валерия Андрианова"
+    },
+    {
+      "Id": 6,
+      "Name": "Federico Lois"
+    },
+    {
+      "Id": 7,
+      "Name": "Павел Тупицын"
+    },
+    {
+      "Id": 8,
+      "Name": "Pavel Yosifovich"
+    },
+    {
+      "Id": 9,
+      "Name": "Christos Matskas"
+    },
+    {
+      "Id": 10,
+      "Name": "Oren Eini"
+    },
+    {
+      "Id": 11,
+      "Name": "Михаил Кузнецов"
+    },
+    {
+      "Id": 12,
+      "Name": "Игорь Шаталкин"
+    },
+    {
+      "Id": 13,
+      "Name": "Георгий Минашин"
+    },
+    {
+      "Id": 14,
+      "Name": "Sander Molenkamp"
+    },
+    {
+      "Id": 15,
+      "Name": "Алексей Мерсон"
+    },
+    {
+      "Id": 16,
+      "Name": "Raffaele Rialdi"
+    },
+    {
+      "Id": 17,
+      "Name": "Вагиф Абилов"
+    },
+    {
+      "Id": 18,
+      "Name": "Edwin van Wijk"
+    },
+    {
+      "Id": 19,
+      "Name": "Sander Molenkamp"
+    },
+    {
+      "Id": 20,
+      "Name": "Chris Klug"
+    },
+    {
+      "Id": 21,
+      "Name": "Jerome Laban"
+    },
+    {
+      "Id": 22,
+      "Name": "Edwin van Wijk"
+    },
+    {
+      "Id": 23,
+      "Name": "Scott Wlaschin"
+    },
+    {
+      "Id": 26,
+      "Name": "Александр Якунин"
+    },
+    {
+      "Id": 27,
+      "Name": "Bartosz Sypytkowski"
+    },
+    {
+      "Id": 28,
+      "Name": "Денис Цветцих"
+    },
+    {
+      "Id": 29,
+      "Name": "Станислав Флусов"
+    },
+    {
+      "Id": 30,
+      "Name": "Михаил Ярийчук"
+    },
+    {
+      "Id": 32,
+      "Name": "Виталий Егоров"
+    },
+    {
+      "Id": 33,
+      "Name": "Филипп Бочаров"
+    },
+    {
+      "Id": 34,
+      "Name": "Kevin Gosse"
+    }
+  ]
+}
