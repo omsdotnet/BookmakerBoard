@@ -1,309 +1,37 @@
 {
   "Bidders": [
-    {
-      "CurrentScore": 0,
-      "Id": 1,
-      "Name": "PKulbida",
-      "StartScore": 1000
-    },
-    {
-      "CurrentScore": 5000,
-      "Id": 2,
-      "Name": "Peresada_Oleg",
-      "StartScore": 1000
-    },
-    {
-      "CurrentScore": 300,
-      "Id": 3,
-      "Name": "timonyatim",
-      "StartScore": 1000
-    },
-    {
-      "CurrentScore": 900,
-      "Id": 4,
-      "Name": " Sergey",
-      "StartScore": 1000
-    },
-    {
-      "CurrentScore": 5000,
-      "Id": 5,
-      "Name": "lifefreedom11",
-      "StartScore": 1000
-    },
-    {
-      "CurrentScore": 500,
-      "Id": 6,
-      "Name": "atlantis3012",
-      "StartScore": 1000
-    },
-    {
-      "CurrentScore": 2200,
-      "Id": 8,
-      "Name": "Digiman89",
-      "StartScore": 1000
-    },
-    {
-      "CurrentScore": 3000,
-      "Id": 9,
-      "Name": "eugene01",
-      "StartScore": 1000
-    },
-    {
-      "CurrentScore": 5000,
-      "Id": 10,
-      "Name": "maxshoshin",
-      "StartScore": 1000
-    },
-    {
-      "CurrentScore": 4000,
-      "Id": 11,
-      "Name": "ishatalkin",
-      "StartScore": 1000
-    },
-    {
-      "CurrentScore": 0,
-      "Id": 12,
-      "Name": "unchase",
-      "StartScore": 1000
-    },
-    {
-      "CurrentScore": 5000,
-      "Id": 13,
-      "Name": "waynesayonara",
-      "StartScore": 1000
-    },
-    {
-      "CurrentScore": 0,
-      "Id": 14,
-      "Name": "MrVitaly",
-      "StartScore": 1000
-    },
-    {
-      "CurrentScore": 5000,
-      "Id": 15,
-      "Name": "lirikill",
-      "StartScore": 1000
-    },
-    {
-      "CurrentScore": 1336,
-      "Id": 16,
-      "Name": "oneyearlater",
-      "StartScore": 1000
-    },
-    {
-      "CurrentScore": 1200,
-      "Id": 17,
-      "Name": "sergeyo1",
-      "StartScore": 1000
-    },
-    {
-      "CurrentScore": 5000,
-      "Id": 18,
-      "Name": "pugacha",
-      "StartScore": 1000
-    }
   ],
   "Rides": [
     {
       "Id": 0,
       "Number": 1,
       "Rates": [
-        {
-          "Bidder": {
-            "CurrentScore": 5000,
-            "Id": 5,
-            "Name": "lifefreedom11",
-            "StartScore": 1000
-          },
-          "Id": 1,
-          "RateValue": 1000,
-          "Team": 0
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 500,
-            "Id": 6,
-            "Name": "atlantis3012",
-            "StartScore": 1000
-          },
-          "Id": 2,
-          "RateValue": 100,
-          "Team": 0
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 500,
-            "Id": 6,
-            "Name": "atlantis3012",
-            "StartScore": 1000
-          },
-          "Id": 3,
-          "RateValue": 100,
-          "Team": 12
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 5000,
-            "Id": 10,
-            "Name": "maxshoshin",
-            "StartScore": 1000
-          },
-          "Id": 4,
-          "RateValue": 1000,
-          "Team": 0
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 5000,
-            "Id": 13,
-            "Name": "waynesayonara",
-            "StartScore": 1000
-          },
-          "Id": 5,
-          "RateValue": 1000,
-          "Team": 0
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 5000,
-            "Id": 15,
-            "Name": "lirikill",
-            "StartScore": 1000
-          },
-          "Id": 6,
-          "RateValue": 1000,
-          "Team": 0
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 5000,
-            "Id": 2,
-            "Name": "Peresada_Oleg",
-            "StartScore": 1000
-          },
-          "Id": 7,
-          "RateValue": 1000,
-          "Team": 0
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 1200,
-            "Id": 17,
-            "Name": "sergeyo1",
-            "StartScore": 1000
-          },
-          "Id": 8,
-          "RateValue": 300,
-          "Team": 20
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 5000,
-            "Id": 18,
-            "Name": "pugacha",
-            "StartScore": 1000
-          },
-          "Id": 9,
-          "RateValue": 1000,
-          "Team": 0
-        }
       ],
       "WinnerTeams": [
-        0
       ]
     },
     {
       "Id": 1,
       "Number": 2,
       "Rates": [
-        {
-          "Bidder": {
-            "CurrentScore": 500,
-            "Id": 6,
-            "Name": "atlantis3012",
-            "StartScore": 1000
-          },
-          "Id": 1,
-          "RateValue": 200,
-          "Team": 7
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 0,
-            "Id": 14,
-            "Name": "MrVitaly",
-            "StartScore": 1000
-          },
-          "Id": 2,
-          "RateValue": 1000,
-          "Team": 12
-        }
       ],
       "WinnerTeams": [
-        10
       ]
     },
     {
       "Id": 2,
       "Number": 3,
       "Rates": [
-        {
-          "Bidder": {
-            "CurrentScore": 500,
-            "Id": 6,
-            "Name": "atlantis3012",
-            "StartScore": 1000
-          },
-          "Id": 1,
-          "RateValue": 150,
-          "Team": 20
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 500,
-            "Id": 6,
-            "Name": "atlantis3012",
-            "StartScore": 1000
-          },
-          "Id": 2,
-          "RateValue": 75,
-          "Team": 23
-        }
       ],
       "WinnerTeams": [
-        12,
-        13
       ]
     },
     {
       "Id": 3,
       "Number": 4,
       "Rates": [
-        {
-          "Bidder": {
-            "CurrentScore": 500,
-            "Id": 6,
-            "Name": "atlantis3012",
-            "StartScore": 1000
-          },
-          "Id": 1,
-          "RateValue": 150,
-          "Team": 27
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 500,
-            "Id": 6,
-            "Name": "atlantis3012",
-            "StartScore": 1000
-          },
-          "Id": 2,
-          "RateValue": 75,
-          "Team": 26
-        }
       ],
       "WinnerTeams": [
-        29
       ]
     },
     {
@@ -312,7 +40,6 @@
       "Rates": [
       ],
       "WinnerTeams": [
-        27
       ]
     },
     {
@@ -321,67 +48,30 @@
       "Rates": [
       ],
       "WinnerTeams": [
-        6
       ]
     },
     {
       "Id": 6,
       "Number": 7,
       "Rates": [
-        {
-          "Bidder": {
-            "CurrentScore": 500,
-            "Id": 6,
-            "Name": "atlantis3012",
-            "StartScore": 1000
-          },
-          "Id": 1,
-          "RateValue": 50,
-          "Team": 15
-        }
       ],
       "WinnerTeams": [
-        34
       ]
     },
     {
       "Id": 7,
       "Number": 8,
       "Rates": [
-        {
-          "Bidder": {
-            "CurrentScore": 500,
-            "Id": 6,
-            "Name": "atlantis3012",
-            "StartScore": 1000
-          },
-          "Id": 1,
-          "RateValue": 50,
-          "Team": 11
-        }
       ],
       "WinnerTeams": [
-        4
       ]
     },
     {
       "Id": 8,
       "Number": 9,
       "Rates": [
-        {
-          "Bidder": {
-            "CurrentScore": 500,
-            "Id": 6,
-            "Name": "atlantis3012",
-            "StartScore": 1000
-          },
-          "Id": 1,
-          "RateValue": 50,
-          "Team": 1
-        }
       ],
       "WinnerTeams": [
-        7
       ]
     },
     {
@@ -390,283 +80,30 @@
       "Rates": [
       ],
       "WinnerTeams": [
-        33
       ]
     },
     {
       "Id": 10,
       "Number": 11,
       "Rates": [
-        {
-          "Bidder": {
-            "CurrentScore": 2200,
-            "Id": 8,
-            "Name": "Digiman89",
-            "StartScore": 1000
-          },
-          "Id": 2,
-          "RateValue": 400,
-          "Team": 0
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 300,
-            "Id": 3,
-            "Name": "timonyatim",
-            "StartScore": 1000
-          },
-          "Id": 3,
-          "RateValue": 500,
-          "Team": 23
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 4000,
-            "Id": 11,
-            "Name": "ishatalkin",
-            "StartScore": 1000
-          },
-          "Id": 5,
-          "RateValue": 1000,
-          "Team": 12
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 1336,
-            "Id": 16,
-            "Name": "oneyearlater",
-            "StartScore": 1000
-          },
-          "Id": 6,
-          "RateValue": 334,
-          "Team": 0
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 1336,
-            "Id": 16,
-            "Name": "oneyearlater",
-            "StartScore": 1000
-          },
-          "Id": 7,
-          "RateValue": 333,
-          "Team": 23
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 1336,
-            "Id": 16,
-            "Name": "oneyearlater",
-            "StartScore": 1000
-          },
-          "Id": 8,
-          "RateValue": 333,
-          "Team": 33
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 1200,
-            "Id": 17,
-            "Name": "sergeyo1",
-            "StartScore": 1000
-          },
-          "Id": 9,
-          "RateValue": 300,
-          "Team": 0
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 1200,
-            "Id": 17,
-            "Name": "sergeyo1",
-            "StartScore": 1000
-          },
-          "Id": 10,
-          "RateValue": 400,
-          "Team": 7
-        }
       ],
       "WinnerTeams": [
-        0,
-        10,
-        12,
-        13
       ]
     },
     {
       "Id": 11,
       "Number": 12,
       "Rates": [
-        {
-          "Bidder": {
-            "CurrentScore": 0,
-            "Id": 1,
-            "Name": "PKulbida",
-            "StartScore": 1000
-          },
-          "Id": 1,
-          "RateValue": 500,
-          "Team": 32
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 900,
-            "Id": 4,
-            "Name": " Sergey",
-            "StartScore": 1000
-          },
-          "Id": 2,
-          "RateValue": 200,
-          "Team": 7
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 900,
-            "Id": 4,
-            "Name": " Sergey",
-            "StartScore": 1000
-          },
-          "Id": 3,
-          "RateValue": 300,
-          "Team": 0
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 900,
-            "Id": 4,
-            "Name": " Sergey",
-            "StartScore": 1000
-          },
-          "Id": 4,
-          "RateValue": 300,
-          "Team": 33
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 2200,
-            "Id": 8,
-            "Name": "Digiman89",
-            "StartScore": 1000
-          },
-          "Id": 5,
-          "RateValue": 400,
-          "Team": 33
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 2200,
-            "Id": 8,
-            "Name": "Digiman89",
-            "StartScore": 1000
-          },
-          "Id": 6,
-          "RateValue": 200,
-          "Team": 29
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 3000,
-            "Id": 9,
-            "Name": "eugene01",
-            "StartScore": 1000
-          },
-          "Id": 7,
-          "RateValue": 1000,
-          "Team": 0
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 0,
-            "Id": 12,
-            "Name": "unchase",
-            "StartScore": 1000
-          },
-          "Id": 8,
-          "RateValue": 500,
-          "Team": 33
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 0,
-            "Id": 1,
-            "Name": "PKulbida",
-            "StartScore": 1000
-          },
-          "Id": 9,
-          "RateValue": 500,
-          "Team": 23
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 300,
-            "Id": 3,
-            "Name": "timonyatim",
-            "StartScore": 1000
-          },
-          "Id": 10,
-          "RateValue": 200,
-          "Team": 20
-        }
       ],
       "WinnerTeams": [
-        0,
-        10,
-        12,
-        13,
-        29,
-        27
       ]
     },
     {
       "Id": 12,
       "Number": 13,
       "Rates": [
-        {
-          "Bidder": {
-            "CurrentScore": 900,
-            "Id": 4,
-            "Name": " Sergey",
-            "StartScore": 1000
-          },
-          "Id": 1,
-          "RateValue": 200,
-          "Team": 17
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 0,
-            "Id": 12,
-            "Name": "unchase",
-            "StartScore": 1000
-          },
-          "Id": 2,
-          "RateValue": 300,
-          "Team": 28
-        },
-        {
-          "Bidder": {
-            "CurrentScore": 0,
-            "Id": 12,
-            "Name": "unchase",
-            "StartScore": 1000
-          },
-          "Id": 3,
-          "RateValue": 200,
-          "Team": 30
-        }
       ],
       "WinnerTeams": [
-        0,
-        10,
-        12,
-        13,
-        29,
-        27,
-        6,
-        34,
-        4,
-        7,
-        33
       ]
     }
   ],
@@ -677,127 +114,227 @@
     },
     {
       "Id": 1,
-      "Name": "Карлен Симонян"
+      "Name": "Егор Богатов"
     },
     {
       "Id": 2,
-      "Name": "Roland Guijt"
-    },
-    {
-      "Id": 3,
-      "Name": "Johnny Hooyberghs"
-    },
-    {
-      "Id": 4,
-      "Name": "Станислав Сидристый"
-    },
-    {
-      "Id": 5,
-      "Name": "Валерия Андрианова"
-    },
-    {
-      "Id": 6,
-      "Name": "Federico Lois"
-    },
-    {
-      "Id": 7,
-      "Name": "Павел Тупицын"
-    },
-    {
-      "Id": 8,
-      "Name": "Pavel Yosifovich"
-    },
-    {
-      "Id": 9,
-      "Name": "Christos Matskas"
-    },
-    {
-      "Id": 10,
-      "Name": "Oren Eini"
-    },
-    {
-      "Id": 11,
-      "Name": "Михаил Кузнецов"
-    },
-    {
-      "Id": 12,
-      "Name": "Игорь Шаталкин"
-    },
-    {
-      "Id": 13,
-      "Name": "Георгий Минашин"
-    },
-    {
-      "Id": 14,
-      "Name": "Sander Molenkamp"
-    },
-    {
-      "Id": 15,
-      "Name": "Алексей Мерсон"
-    },
-    {
-      "Id": 16,
-      "Name": "Raffaele Rialdi"
-    },
-    {
-      "Id": 17,
-      "Name": "Вагиф Абилов"
-    },
-    {
-      "Id": 18,
-      "Name": "Edwin van Wijk"
-    },
-    {
-      "Id": 19,
-      "Name": "Sander Molenkamp"
-    },
-    {
-      "Id": 20,
-      "Name": "Chris Klug"
-    },
-    {
-      "Id": 21,
-      "Name": "Jerome Laban"
-    },
-    {
-      "Id": 22,
-      "Name": "Edwin van Wijk"
-    },
-    {
-      "Id": 23,
       "Name": "Scott Wlaschin"
     },
     {
+      "Id": 3,
+      "Name": "Dylan Beattie"
+    },
+    {
+      "Id": 4,
+      "Name": "Raffaele Rialdi"
+    },
+    {
+      "Id": 5,
+      "Name": "Aaron Stannard"
+    },
+    {
+      "Id": 6,
+      "Name": "Дмитрий Иванов"
+    },
+    {
+      "Id": 7,
+      "Name": "Евгений Пешков"
+    },
+    {
+      "Id": 8,
+      "Name": "Stan Drapkin"
+    },
+    {
+      "Id": 9,
+      "Name": "Udi Dahan"
+    },
+    {
+      "Id": 10,
+      "Name": "Роман Просин"
+    },
+    {
+      "Id": 11,
+      "Name": "Дмитрий Нестерук"
+    },
+    {
+      "Id": 12,
+      "Name": "Marco De Sanctis"
+    },
+    {
+      "Id": 13,
+      "Name": "Adam Sitnik"
+    },
+    {
+      "Id": 14,
+      "Name": "Александр Кугушев"
+    },
+    {
+      "Id": 15,
+      "Name": "Егор Гришечко"
+    },
+    {
+      "Id": 16,
+      "Name": "Андрей Дятлов"
+    },
+    {
+      "Id": 17,
+      "Name": "Oren Eini"
+    },
+    {
+      "Id": 18,
+      "Name": "Олег Сафонов"
+    },
+    {
+      "Id": 19,
+      "Name": "Фил Ранжин"
+    },
+    {
+      "Id": 20,
+      "Name": "Алексей Чиркин"
+    },
+    {
+      "Id": 21,
+      "Name": "Андрей Медведев"
+    },
+    {
+      "Id": 22,
+      "Name": "Андрей Елагин"
+    },
+    {
+      "Id": 23,
+      "Name": "Александр Пирогов"
+    },
+    {
       "Id": 26,
-      "Name": "Александр Якунин"
+      "Name": "Екатерина Фирсова"
     },
     {
       "Id": 27,
-      "Name": "Bartosz Sypytkowski"
+      "Name": "Сергей Иванов"
     },
     {
       "Id": 28,
-      "Name": "Денис Цветцих"
+      "Name": "Анастасия Чиркова"
     },
     {
       "Id": 29,
-      "Name": "Станислав Флусов"
+      "Name": "Сергей Тепляков"
     },
     {
       "Id": 30,
-      "Name": "Михаил Ярийчук"
+      "Name": "Евгения Остроумова"
+    },
+    {
+      "Id": 31,
+      "Name": "Сергей Огородников"
     },
     {
       "Id": 32,
-      "Name": "Виталий Егоров"
+      "Name": "Илья Черторыльский"
     },
     {
       "Id": 33,
-      "Name": "Филипп Бочаров"
+      "Name": "Ефимова Екатерина"
     },
     {
       "Id": 34,
-      "Name": "Kevin Gosse"
+      "Name": "Артём Акуляков"
+    },
+    {
+      "Id": 35,
+      "Name": "Александр Чертов"
+    },
+    {
+      "Id": 36,
+      "Name": "Алена Мальцева"
+    },
+    {
+      "Id": 37,
+      "Name": "Сергей Васильев"
+    },
+    {
+      "Id": 38,
+      "Name": "Никита Тюленев"
+    },
+    {
+      "Id": 39,
+      "Name": "Никита Липилин"
+    },
+    {
+      "Id": 40,
+      "Name": "Николай Миронов"
+    },
+    {
+      "Id": 41,
+      "Name": "Антон Маликов"
+    },
+    {
+      "Id": 42,
+      "Name": "Julie Lerman"
+    },
+    {
+      "Id": 43,
+      "Name": "Roberto Freato"
+    },
+    {
+      "Id": 44,
+      "Name": "Юрий Пастушенко"
+    },
+    {
+      "Id": 45,
+      "Name": "Андрей Чебукин"
+    },
+    {
+      "Id": 46,
+      "Name": "Анна Морозова"
+    },
+    {
+      "Id": 47,
+      "Name": "Денис Цветцих"
+    },
+    {
+      "Id": 48,
+      "Name": "Степан Артемьев"
+    },
+    {
+      "Id": 49,
+      "Name": "Антон Оникийчук"
+    },
+    {
+      "Id": 50,
+      "Name": "Андрей Парамонов"
+    },
+    {
+      "Id": 51,
+      "Name": "Ростислав Листеренко"
+    },
+    {
+      "Id": 52,
+      "Name": "Bartosz Adamczewski"
+    },
+    {
+      "Id": 53,
+      "Name": "Дмитрий Мордвинов"
+    },
+    {
+      "Id": 54,
+      "Name": "Kevin Sheldrake"
+    },
+    {
+      "Id": 55,
+      "Name": "Mario Hewardt"
+    },
+    {
+      "Id": 56,
+      "Name": "Kunal Pathak"
+    },
+    {
+      "Id": 57,
+      "Name": "Роман Неволин"
+    },
+    {
+      "Id": 58,
+      "Name": "Станислав Сидристый"
     }
   ]
 }

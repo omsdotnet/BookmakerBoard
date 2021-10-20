@@ -19,7 +19,7 @@ namespace BookmakerBoard.Models
     {
       var koefficient = 2;
 
-      if (Number >= 1 && Number <= 10)
+      if (Number >= 2 && Number <= 10)
       {
         koefficient = 5;
       }
@@ -27,7 +27,7 @@ namespace BookmakerBoard.Models
       {
         koefficient = 4;
       }
-      else if (Number == 12)
+      else if (Number == 1 || Number == 12)
       {
         koefficient = 3;
       }
