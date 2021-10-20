@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace BookmakerBoard.Controllers
 {
   [Route("api/[controller]")]
-      [Authorize]
+  [Authorize]
   public class AuthenticationController : ControllerBase
   {
     private readonly UserManager<IdentityUser> userManager;
@@ -46,7 +46,7 @@ namespace BookmakerBoard.Controllers
         await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, userPrincipal,
           new AuthenticationProperties
           {
-            ExpiresUtc = DateTime.UtcNow.AddMinutes(20),
+            ExpiresUtc = DateTime.UtcNow.AddMinutes(200),
             IsPersistent = false,
             AllowRefresh = false
           });
@@ -83,7 +83,7 @@ namespace BookmakerBoard.Controllers
       return HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme,
         new AuthenticationProperties
         {
-          ExpiresUtc = DateTime.UtcNow.AddMinutes(20),
+          ExpiresUtc = DateTime.UtcNow.AddMinutes(200),
           IsPersistent = false,
           AllowRefresh = false
         });

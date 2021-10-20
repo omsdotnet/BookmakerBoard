@@ -51,7 +51,7 @@ export class Rides extends Component {
           teams,
           loading: false,
           ridesList: rides,
-          currentRide: ride && ride.id ? ride.id: -1,
+          currentRide: ride ? ride.id: -1,
           rides: {
             ...ride,
             rates: ride && ride.rates ? ride.rates.map(p => ({ ...p, isExist: true })) : []
@@ -149,6 +149,7 @@ export class Rides extends Component {
   handleRideChange = (_, { value }) => {
     const { ridesList } = this.state;
     const ride = ridesList.find(p => p.id === value);
+
     this.setState({
       currentRide: value,
       rides: {
@@ -217,17 +218,18 @@ export class Rides extends Component {
     const teamsOptions = teams.map((p, key) => ({ key, value: p.id, text: p.name }));
     const wins = rides.winnerTeams || [];
 
+    console.log(currentRide);
     return (
       <Segment loading={loading} basic>
         <Container>
           <List>
             <List.Item>
-              <List.Header>Заезды</List.Header>
-              <List.Description>Здесь регистрируем заезды и ставки</List.Description>
+              <List.Header>Ставки на победу</List.Header>
+              <List.Description>Здесь регистрируем ставки от участников на спикеров</List.Description>
             </List.Item>
           </List>
           <Divider />
-          <Button content="Создать заезд"
+          <Button content="Создать номинацию"
             onClick={this.handleRide} />
           <span style={{ marginRight: '25px' }} />
           <Button content="Создать ставку"
@@ -235,11 +237,11 @@ export class Rides extends Component {
             onClick={this.handleCreateRate}
             disabled={!isRide ? true : newRateId !== null} />
           <span style={{ marginRight: '25px' }} />
-          <Button content="Сохранить заезд"
+          <Button content="Сохранить номинацию"
             color='red'
             onClick={this.handleSaveRide}
             disabled={!isRide ? true : newRateId !== null} />
-          <Button content="Удалить"
+          <Button content="Удалить номинацию"
             color='red'
             onClick={this.handleDeleteRide}
             disabled={!isRide} />
@@ -247,7 +249,7 @@ export class Rides extends Component {
           <List horizontal>
             <List.Item>
               <List.Header>
-                Номер заезда:
+                Номинация:
               </List.Header>
               <List.Description>
                 <Dropdown fluid
@@ -255,7 +257,7 @@ export class Rides extends Component {
                   value={currentRide}
                   selection
                   scrolling
-                  placeholder="Номер заезда:"
+                  placeholder="Место:"
                   onChange={this.handleRideChange} />
               </List.Description>
             </List.Item>

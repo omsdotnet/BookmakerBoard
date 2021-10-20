@@ -1,7 +1,7 @@
 export const MENU_KEYS = {
   SUMMARY: 'Результаты',
-  RIDES: 'Заезды',
-  TEAMS: 'Команды',
+  RIDES: 'Ставки',
+  TEAMS: 'Спикеры',
   PARTICIPANTS: 'Участники',
   LOGIN: 'Войти',
   LOGOUT: 'Выйти'

@@ -66,7 +66,7 @@ export class Home extends Component {
               <Grid.Column width="4">
                 <Sticky offset={50} context={this.contextRef}>
                   <Segment basic>
-                    <Header>Лидеры</Header>
+                    <Header>Лидеры ставок</Header>
                     <Divider />
                     <List relaxed size='large'>
                       {topBidders && topBidders.map((item, key) => (
@@ -76,13 +76,13 @@ export class Home extends Component {
                             <List.Header as='h3'>{item.name}</List.Header>
                             <List.Item>
                               <div style={{ paddingBottom: '4px' }}>
-                                <span style={{ fontSize: '16px', fontWeight: 'bold' }}>Текущие очки: </span>
+                                <span style={{ fontSize: '16px', fontWeight: 'bold' }}>Текущий счет: </span>
                                 <span>{item.currentScore}</span>
                               </div>
                             </List.Item>
                             <List.Item>
                               <div>
-                                <span style={{ fontSize: '16px', fontWeight: 'bold' }}>Начальные очки: </span>
+                                <span style={{ fontSize: '16px', fontWeight: 'bold' }}>Начальный счет: </span>
                                 <span>{item.startScore}</span>
                               </div>
                             </List.Item>
@@ -100,8 +100,8 @@ export class Home extends Component {
                 <Table singleLine basic='very'>
                   <Table.Header>
                     <Table.Row>
-                      <Table.HeaderCell>Номер заезда</Table.HeaderCell>
-                      <Table.HeaderCell>Победители заезда</Table.HeaderCell>
+                      <Table.HeaderCell>Номинация</Table.HeaderCell>
+                      <Table.HeaderCell>Победители</Table.HeaderCell>
                       <Table.HeaderCell>Статус</Table.HeaderCell>
                     </Table.Row>
                   </Table.Header>
@@ -110,7 +110,13 @@ export class Home extends Component {
                       <Fragment key={key}>
                         <Table.Row error>
                           <Table.Cell>
-                            <Label ribbon color="black">{`Заезд: ${item.number}`}</Label>
+                            <Label ribbon color="black">{
+                              item.number <= 10 ? `Место: ${item.number}`
+                                : item.number == 11 ? `Top 3`
+                                : item.number == 12 ? `Top 5`
+                                : item.number == 13 ? `Top 10`
+                                : ``
+                            }</Label>
                           </Table.Cell>
                           <Table.Cell>
                             <List key={key} as="ul">
@@ -122,7 +128,7 @@ export class Home extends Component {
                             </List>
                           </Table.Cell>
                           <Table.Cell>
-                            {!item.winnerTeams.length ? 'Не завершен' : 'Завершен'}
+                            {!item.winnerTeams.length ? 'Открыто' : 'Закрыто'}
                           </Table.Cell>
                         </Table.Row>
                         <Table.Row>

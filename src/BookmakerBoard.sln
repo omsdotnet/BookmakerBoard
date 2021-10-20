@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookmakerBoard", "Bookmaker
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookmakerBoard.Tests", "BookmakerBoardTest\BookmakerBoard.Tests.csproj", "{662B2BE7-E7DF-4F81-8FFB-8C9F9C94BCF8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookmakerConsole", "BookmakerConsole\BookmakerConsole.csproj", "{6F7A9E03-573E-4211-A47D-F8C97AE77D29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{662B2BE7-E7DF-4F81-8FFB-8C9F9C94BCF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{662B2BE7-E7DF-4F81-8FFB-8C9F9C94BCF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{662B2BE7-E7DF-4F81-8FFB-8C9F9C94BCF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F7A9E03-573E-4211-A47D-F8C97AE77D29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F7A9E03-573E-4211-A47D-F8C97AE77D29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F7A9E03-573E-4211-A47D-F8C97AE77D29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F7A9E03-573E-4211-A47D-F8C97AE77D29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
