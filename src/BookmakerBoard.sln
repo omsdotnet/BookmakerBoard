@@ -9,10 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookmakerBoard.Tests", "Boo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookmakerConsole", "BookmakerConsole\BookmakerConsole.csproj", "{6F7A9E03-573E-4211-A47D-F8C97AE77D29}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BetDotNext", "BetDotNext\BetDotNext.csproj", "{7B4AD6B1-E7E0-400F-AF60-C3017BCAF032}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BetDotNext.Tests", "BetDotNext.Tests\BetDotNext.Tests.csproj", "{DE1405DD-18DB-4847-8BC4-45368CC30458}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,14 +27,6 @@ Global
 		{6F7A9E03-573E-4211-A47D-F8C97AE77D29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F7A9E03-573E-4211-A47D-F8C97AE77D29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F7A9E03-573E-4211-A47D-F8C97AE77D29}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7B4AD6B1-E7E0-400F-AF60-C3017BCAF032}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7B4AD6B1-E7E0-400F-AF60-C3017BCAF032}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7B4AD6B1-E7E0-400F-AF60-C3017BCAF032}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7B4AD6B1-E7E0-400F-AF60-C3017BCAF032}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DE1405DD-18DB-4847-8BC4-45368CC30458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DE1405DD-18DB-4847-8BC4-45368CC30458}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DE1405DD-18DB-4847-8BC4-45368CC30458}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DE1405DD-18DB-4847-8BC4-45368CC30458}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
