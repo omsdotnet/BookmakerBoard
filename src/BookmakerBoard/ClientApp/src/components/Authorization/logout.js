@@ -4,11 +4,6 @@ import { logout } from '../../services/authentication';
 
 export class Logout extends Component
 {
-  constructor(props)
-  {
-    super(props);
-  }
-
   handleLogout = async () =>
   {
     await logout().then(() =>

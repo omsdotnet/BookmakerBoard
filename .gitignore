@@ -12,3 +12,4 @@ Build/.sonar*
 /src/packages
 /promo/Matherials
 *.user
+/.vs/BookmakerBoard
