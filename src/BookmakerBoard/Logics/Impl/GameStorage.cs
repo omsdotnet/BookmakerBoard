@@ -9,7 +9,7 @@ namespace BookmakerBoard.Logics.Impl
     private readonly IGame gameEngine;
     private string dataFilePath;
 
-    public GameStorage(IGame game, IHostingEnvironment appEnvironment)
+    public GameStorage(IGame game, IWebHostEnvironment appEnvironment)
     {
       gameEngine = game;
 

@@ -112,9 +112,9 @@ export class Home extends Component {
                           <Table.Cell>
                             <Label ribbon color="black">{
                               item.number <= 10 ? `Место: ${item.number}`
-                                : item.number == 11 ? `Top 3`
-                                : item.number == 12 ? `Top 5`
-                                : item.number == 13 ? `Top 10`
+                                : item.number === 11 ? `Top 3`
+                                : item.number === 12 ? `Top 5`
+                                : item.number === 13 ? `Top 10`
                                 : ``
                             }</Label>
                           </Table.Cell>
