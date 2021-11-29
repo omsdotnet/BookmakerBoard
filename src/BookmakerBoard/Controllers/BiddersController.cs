@@ -9,7 +9,8 @@ namespace BookmakerBoard.Controllers
 {
   [Authorize]
   [Route("api/[controller]")]
-  public class BiddersController : Controller
+  [ApiController]
+  public class BiddersController : ControllerBase
   {
     private readonly IGame gameEngine;
     private readonly IGameStorage gameStorage;
@@ -22,7 +23,7 @@ namespace BookmakerBoard.Controllers
       this.gameStorage = gameStorage;
     }
 
-    [HttpGet("[action]")]
+    [HttpGet()]
     [AllowAnonymous]
     public IEnumerable<Bidder> GetAll()
     {
