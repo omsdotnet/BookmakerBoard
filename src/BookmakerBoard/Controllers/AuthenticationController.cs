@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace BookmakerBoard.Controllers
 {
   [Route("api/[controller]")]
+  [ApiController]
   [Authorize]
   public class AuthenticationController : ControllerBase
   {

@@ -1,4 +1,4 @@
-﻿import React, { Component } from 'react';
+import React, { Component } from 'react';
 import { biddersGetAll } from '../../services/bidders';
 import { Segment, List, Grid, Table, Button, Divider } from 'semantic-ui-react';
 import BidderRow from './BidderRow';

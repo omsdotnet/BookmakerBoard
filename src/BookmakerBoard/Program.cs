@@ -5,11 +5,10 @@ using BookmakerBoard.Logics.Impl;
 
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 
 WebApplicationBuilder? builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddMvc(options => options.EnableEndpointRouting = false);
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddIdentityCore<IdentityUser>()
@@ -36,11 +35,6 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.SlidingExpiration = true;
     });
 
-builder.Services.AddSpaStaticFiles(configuration =>
-{
-    configuration.RootPath = "ClientApp/build";
-});
-
 if (builder.Environment.IsDevelopment())
 {
     builder.Services.AddSwaggerGen(c =>
@@ -60,32 +54,17 @@ if (app.Environment.IsDevelopment())
 else
 {
     app.UseHsts();
-    app.UseExceptionHandler("/Error");
 }
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-app.UseSpaStaticFiles();
 app.UseRouting();
+
 app.UseAuthentication()
    .UseAuthorization();
 
-app.UseMvc(routes =>
-{
-    routes.MapRoute(
-              name: "default",
-              template: "{controller}/{action=Index}/{id?}");
-});
+app.MapControllers();
 
-app.UseSpa(spa =>
-  {
-      spa.Options.SourcePath = "ClientApp";
-
-      if (app.Environment.IsDevelopment())
-      {
-          spa.UseReactDevelopmentServer(npmScript: "start");
-      }
-  });
-
+app.MapFallbackToFile("index.html");
 
 app.Run();

@@ -9,7 +9,8 @@ namespace BookmakerBoard.Controllers
 {
   [Authorize]
   [Route("api/[controller]")]
-  public class RidesController : Controller
+  [ApiController]
+  public class RidesController : ControllerBase
   {
     private readonly IGame gameEngine;
     private readonly IGameStorage gameStorage;
