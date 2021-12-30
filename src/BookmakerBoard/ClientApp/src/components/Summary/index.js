@@ -1,4 +1,4 @@
-﻿import React, { Component, createRef, Fragment } from 'react';
+import React, { Component, createRef, Fragment } from 'react';
 import { ridesGetAll } from '../../services/rides';
 import { getTop } from '../../services/bidders';
 import { teamsGetAll } from '../../services/teams';

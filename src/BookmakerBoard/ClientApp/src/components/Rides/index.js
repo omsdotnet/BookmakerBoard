@@ -1,4 +1,4 @@
-﻿import React, { Component } from 'react';
+import React, { Component } from 'react';
 import { ridesGetAll, ridesCreate, ridesPut, ridesDelete } from '../../services/rides';
 import { biddersGetAll } from '../../services/bidders';
 import { teamsGetAll } from '../../services/teams';

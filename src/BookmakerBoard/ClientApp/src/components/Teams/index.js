@@ -1,4 +1,4 @@
-﻿import React, { Component } from 'react';
+import React, { Component } from 'react';
 import { teamsGetAll } from '../../services/teams';
 import { Grid, Table, Button, Segment, List, Divider } from 'semantic-ui-react';
 import TeamRow from './TeamRow';
